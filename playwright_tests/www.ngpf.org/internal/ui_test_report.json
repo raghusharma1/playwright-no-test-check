@@ -1,0 +1,165 @@
+{
+  "login_scenario": "Skipped",
+  "workflow_completed": true,
+  "workflow_result": "PASS",
+  "workflow_error": "",
+  "login_agent_activity_summary": "Not available",
+  "user_scenario_agent_activity_summary": [
+    "The agent initiated the test case by navigating to the application home page and successfully clicked the 'Get Started Now' button. It proceeded to interact with the Welcome dialog by clicking 'OK', then expanded the 'Accounts' section via the associated menu item. The agent accurately selected the 'Account Activity' menu, navigated to the relevant account page, and correctly clicked on the 'Saving' bar. Finally, the agent successfully verified the presence of the element with ID '1100001', confirming completion of all required scenario steps."
+  ],
+  "generated_files": {
+    "feature_files": [],
+    "json_files": []
+  },
+  "scenarios": {},
+  "token_usage": {
+    "total": {
+      "input": 1386766,
+      "output": 35222,
+      "total": 1421988,
+      "cost": 1.7124599999999994,
+      "cached_input": 895232
+    },
+    "sessions": {
+      "main_execution": {
+        "type": "root",
+        "input": 0,
+        "output": 0,
+        "total": 0,
+        "cost": 0.0,
+        "cached_input": 0,
+        "call_count": 0,
+        "start_time": 1774250606.764111,
+        "end_time": 1774251308.917822,
+        "duration": 702.1537108421326
+      },
+      "extraction_agent": {
+        "type": "auto_created",
+        "input": 97323,
+        "output": 2340,
+        "total": 99663,
+        "cost": 0.13983,
+        "cached_input": 49024,
+        "call_count": 7,
+        "start_time": 1774250630.8543181,
+        "end_time": null,
+        "duration": null
+      },
+      "scenario_llm": {
+        "type": "auto_created",
+        "input": 4771,
+        "output": 3168,
+        "total": 7939,
+        "cost": 0.034886,
+        "cached_input": 0,
+        "call_count": 1,
+        "start_time": 1774250725.324922,
+        "end_time": null,
+        "duration": null
+      },
+      "pom_gen_standalone_analyzer": {
+        "type": "test_generation",
+        "input": 57153,
+        "output": 1582,
+        "total": 58735,
+        "cost": 0.049586,
+        "cached_input": 51584,
+        "call_count": 7,
+        "start_time": 1774250725.371798,
+        "end_time": null,
+        "duration": null
+      },
+      "llm_call": {
+        "type": "auto_created",
+        "input": 54945,
+        "output": 8098,
+        "total": 63043,
+        "cost": 0.174674,
+        "cached_input": 0,
+        "call_count": 7,
+        "start_time": 1774250752.3231502,
+        "end_time": null,
+        "duration": null
+      },
+      "test_gen_pom_validate_check_deposit_form_and_error_handling____partial_04_1774191703": {
+        "type": "test_generation",
+        "input": 131500,
+        "output": 1785,
+        "total": 133285,
+        "cost": 0.15209599999999998,
+        "cached_input": 83456,
+        "call_count": 13,
+        "start_time": 1774250774.86275,
+        "end_time": null,
+        "duration": null
+      },
+      "test_gen_pom_bill_payment_recipient_management___complete_user_journey_02_1774191804": {
+        "type": "test_generation",
+        "input": 210011,
+        "output": 1871,
+        "total": 211882,
+        "cost": 0.234734,
+        "cached_input": 133504,
+        "call_count": 16,
+        "start_time": 1774250774.941358,
+        "end_time": null,
+        "duration": null
+      },
+      "test_gen_pom_e2e_business_workflow___complete_user_journey_03_1774192414": {
+        "type": "test_generation",
+        "input": 142197,
+        "output": 1573,
+        "total": 143770,
+        "cost": 0.257234,
+        "cached_input": 26496,
+        "call_count": 12,
+        "start_time": 1774250775.05862,
+        "end_time": null,
+        "duration": null
+      },
+      "test_gen_pom_bank_simulator___complete_account_exploration_user_journey": {
+        "type": "test_generation",
+        "input": 138066,
+        "output": 1475,
+        "total": 139541,
+        "cost": 0.190972,
+        "cached_input": 64640,
+        "call_count": 13,
+        "start_time": 1774250775.123334,
+        "end_time": null,
+        "duration": null
+      },
+      "code_repair_validate_check_deposit_form_and_error_handling____partial_04_1774191703_pom.noauth.spec.js": {
+        "type": "code_repair",
+        "input": 76324,
+        "output": 5013,
+        "total": 81337,
+        "cost": 0.106736,
+        "cached_input": 57344,
+        "call_count": 7,
+        "start_time": 1774250867.861644,
+        "end_time": 1774250990.694783,
+        "duration": 122.8331389427185
+      },
+      "code_repair_bill_payment_recipient_management___complete_user_journey_02_1774191804_pom.noauth.spec.js": {
+        "type": "code_repair",
+        "input": 474476,
+        "output": 8317,
+        "total": 482793,
+        "cost": 0.371712,
+        "cached_input": 429184,
+        "call_count": 32,
+        "start_time": 1774251004.4469938,
+        "end_time": 1774251285.6139462,
+        "duration": 281.1669523715973
+      }
+    },
+    "provider": "azure_open_ai",
+    "model": "gpt-4.1",
+    "timestamp": "2026-03-23T13:05:08.918198",
+    "cache_statistics": {
+      "total_cached_tokens": 895232,
+      "cache_hit_rate_percent": 64.6
+    }
+  }
+}
