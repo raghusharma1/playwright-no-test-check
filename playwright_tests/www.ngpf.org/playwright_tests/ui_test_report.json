@@ -10,14 +10,8 @@
         "json_files": []
     },
     "scenarios": {
-        "submit_a_single_transfer_between_accounts_01_1774186529": {
-            "test_name": "submit_a_single_transfer_between_accounts_01_1774186529",
-            "description": "Scenario run is working",
-            "testFilePath": "",
-            "extracted_data": "www.ngpf.org/extracted_data/captured_ui_data.json"
-        },
-        "partial_flow____partial_user_journey_due_to_empty_transfer_h_02_1774186301": {
-            "test_name": "partial_flow_--_partial_user_journey_due_to_empty_transfer_h_02_1774186301",
+        "e2e_business_workflow___complete_user_journey_06_1774247273": {
+            "test_name": "e2e_business_workflow_-_complete_user_journey_06_1774247273",
             "description": "Scenario run is working",
             "testFilePath": "",
             "extracted_data": "www.ngpf.org/extracted_data/captured_ui_data.json"
