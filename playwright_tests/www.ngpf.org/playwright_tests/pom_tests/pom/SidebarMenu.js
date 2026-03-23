@@ -24,6 +24,13 @@ export class SidebarMenu extends BasePage {
     // 2. page.getByText('DISPLAY ALL TRANSFERS')
     // 3. page.locator('a').filter({ hasText: /^DISPLAY ALL TRANSFERS$/ })
     this.displayAllTransfersLink = page.locator('a').filter({ hasText: 'DISPLAY ALL TRANSFERS' });
+    
+    // ACCOUNTS expandable menu
+    // 1. page.locator('a').filter({ hasText: 'ACCOUNTS expand_more' })
+    // 2. page.locator('a.mat-list-item.mat-focus-indicator')
+    // 3. page.locator('a.mat-list-item')
+    // 4. page.locator('xpath=html/body/app-root/app-main/mat-drawer-container/mat-drawer/div/mat-nav-list/app-menu-list-item[3]/a')
+    this.accountsExpandBtn = page.locator('a').filter({ hasText: 'ACCOUNTS expand_more' });
   }
 
   /**
@@ -51,6 +58,15 @@ export class SidebarMenu extends BasePage {
    */
   async clickDisplayAllTransfers() {
     await this.displayAllTransfersLink.click({ timeout: 25000 });
+    return this;
+  }
+
+  /**
+   * Expands the ACCOUNTS menu in the sidebar navigation drawer.
+   * @returns {Promise<this>}
+   */
+  async clickAccountsMenu() {
+    await this.accountsExpandBtn.click({ timeout: 25000 });
     return this;
   }
 }
