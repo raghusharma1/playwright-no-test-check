@@ -24,6 +24,12 @@ export class SidebarMenu extends BasePage {
     // 2. page.getByText('DISPLAY ALL TRANSFERS')
     // 3. page.locator('a').filter({ hasText: /^DISPLAY ALL TRANSFERS$/ })
     this.displayAllTransfersLink = page.locator('a').filter({ hasText: 'DISPLAY ALL TRANSFERS' });
+
+    // DEPOSIT CHECKS link in sidebar
+    // 1. page.locator('a').filter({ hasText: 'DEPOSIT CHECKS' })
+    // 2. page.getByText('DEPOSIT CHECKS')
+    // 3. page.locator('a').filter({ hasText: /^DEPOSIT CHECKS$/ })
+    this.depositChecksLink = page.locator('a').filter({ hasText: 'DEPOSIT CHECKS' });
   }
 
   /**
@@ -51,6 +57,15 @@ export class SidebarMenu extends BasePage {
    */
   async clickDisplayAllTransfers() {
     await this.displayAllTransfersLink.click({ timeout: 25000 });
+    return this;
+  }
+
+  /**
+   * Clicks the DEPOSIT CHECKS link in the sidebar.
+   * @returns {Promise<this>}
+   */
+  async clickDepositChecks() {
+    await this.depositChecksLink.click({ timeout: 20000 });
     return this;
   }
 }

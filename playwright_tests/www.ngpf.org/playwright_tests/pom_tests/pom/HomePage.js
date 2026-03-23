@@ -22,6 +22,14 @@ export class HomePage extends BasePage {
     // 3. page.getByText('Ok')
     // 4. page.locator('#mat-dialog-0').getByRole('button', { name: 'Ok' })
     this.okBtn = page.getByRole('button', { name: 'Ok' });
+
+    // Welcome dialog
+    // 1. page.getByRole('dialog', { name: 'Welcome to the NGPF Bank' })
+    // 2. page.getByRole('dialog', { name: /Welcome to the NGPF Bank Simulator/ })
+    // 3. page.locator('#cdk-overlay-0').getByRole('dialog', { name: 'Welcome to the NGPF Bank Simulator' })
+    // 4. page.locator('mat-dialog-container.mat-dialog-container.ng-tns-c82-10')
+    // 5. page.locator('mat-dialog-container.mat-dialog-container')
+    this.welcomeDialog = page.getByRole('dialog', { name: 'Welcome to the NGPF Bank' });
   }
 
   /**
@@ -39,6 +47,15 @@ export class HomePage extends BasePage {
    */
   async clickWelcomeOk() {
     await this.okBtn.click({ timeout: 20000 });
+    return this;
+  }
+
+  /**
+   * Focuses/clicks the Welcome dialog, ensuring it is active and accessible.
+   * @returns {Promise<this>}
+   */
+  async focusWelcomeDialog() {
+    await this.welcomeDialog.click({ timeout: 30000 });
     return this;
   }
 }

@@ -1,0 +1,153 @@
+{
+  "login_scenario": "Skipped",
+  "workflow_completed": true,
+  "workflow_result": "PASS",
+  "workflow_error": "",
+  "login_agent_activity_summary": "Not available",
+  "user_scenario_agent_activity_summary": [
+    "The agent systematically executed the Welcome and Account Activity scenario as specified. It began by navigating to the home page and clicking the 'Get Started Now' button. The agent then proceeded to interact with the Welcome dialog and confirmed it by clicking 'OK.' Next, the agent accessed the 'Accounts' menu and selected 'Account Activity.' On the account page, the agent clicked the 'Saving' tab and verified the presence of the account ID '1100001.' The agent finalized the scenario by confirming the result and reporting completion."
+  ],
+  "generated_files": {
+    "feature_files": [],
+    "json_files": []
+  },
+  "scenarios": {},
+  "token_usage": {
+    "total": {
+      "input": 694769,
+      "output": 29576,
+      "total": 724345,
+      "cost": 0.9272660000000001,
+      "cached_input": 465920
+    },
+    "sessions": {
+      "main_execution": {
+        "type": "root",
+        "input": 0,
+        "output": 0,
+        "total": 0,
+        "cost": 0.0,
+        "cached_input": 0,
+        "call_count": 0,
+        "start_time": 1774276669.4453862,
+        "end_time": 1774277051.5665383,
+        "duration": 382.1211521625519
+      },
+      "extraction_agent": {
+        "type": "auto_created",
+        "input": 145591,
+        "output": 2840,
+        "total": 148431,
+        "cost": 0.18929400000000002,
+        "cached_input": 83072,
+        "call_count": 9,
+        "start_time": 1774276693.642268,
+        "end_time": null,
+        "duration": null
+      },
+      "scenario_llm": {
+        "type": "auto_created",
+        "input": 6096,
+        "output": 4094,
+        "total": 10190,
+        "cost": 0.044944000000000005,
+        "cached_input": 0,
+        "call_count": 1,
+        "start_time": 1774276821.4297178,
+        "end_time": null,
+        "duration": null
+      },
+      "pom_gen_standalone_analyzer": {
+        "type": "test_generation",
+        "input": 50020,
+        "output": 2308,
+        "total": 52328,
+        "cost": 0.055336,
+        "cached_input": 42112,
+        "call_count": 6,
+        "start_time": 1774276821.4873145,
+        "end_time": null,
+        "duration": null
+      },
+      "llm_call": {
+        "type": "auto_created",
+        "input": 56721,
+        "output": 6955,
+        "total": 63676,
+        "cost": 0.169082,
+        "cached_input": 0,
+        "call_count": 7,
+        "start_time": 1774276849.7109718,
+        "end_time": null,
+        "duration": null
+      },
+      "test_gen_pom_validate_check_deposit_form_and_error_handling____partial_04_1774191703": {
+        "type": "test_generation",
+        "input": 78494,
+        "output": 2064,
+        "total": 80558,
+        "cost": 0.07269999999999999,
+        "cached_input": 67200,
+        "call_count": 11,
+        "start_time": 1774276872.4316106,
+        "end_time": null,
+        "duration": null
+      },
+      "test_gen_pom_bill_payment_recipient_management___complete_user_journey_02_1774191804": {
+        "type": "test_generation",
+        "input": 98994,
+        "output": 1881,
+        "total": 100875,
+        "cost": 0.07825200000000002,
+        "cached_input": 89856,
+        "call_count": 9,
+        "start_time": 1774276872.4643612,
+        "end_time": null,
+        "duration": null
+      },
+      "test_gen_pom_e2e_business_workflow___complete_user_journey_03_1774192414": {
+        "type": "test_generation",
+        "input": 80769,
+        "output": 1928,
+        "total": 82697,
+        "cost": 0.09689800000000001,
+        "cached_input": 53376,
+        "call_count": 8,
+        "start_time": 1774276872.4962127,
+        "end_time": null,
+        "duration": null
+      },
+      "test_gen_pom_dashboard___complete_welcome_and_account_activity_scenario": {
+        "type": "test_generation",
+        "input": 53571,
+        "output": 1360,
+        "total": 54931,
+        "cost": 0.08154199999999999,
+        "cached_input": 24320,
+        "call_count": 6,
+        "start_time": 1774276872.5336363,
+        "end_time": null,
+        "duration": null
+      },
+      "code_repair_validate_check_deposit_form_and_error_handling____partial_04_1774191703_pom.noauth.spec.js": {
+        "type": "code_repair",
+        "input": 124513,
+        "output": 6146,
+        "total": 130659,
+        "cost": 0.13921799999999998,
+        "cached_input": 105984,
+        "call_count": 12,
+        "start_time": 1774276917.2740257,
+        "end_time": 1774277037.6133008,
+        "duration": 120.33927512168884
+      }
+    },
+    "provider": "azure_open_ai",
+    "model": "gpt-4.1",
+    "timestamp": "2026-03-23T20:14:11.567457",
+    "cache_statistics": {
+      "total_cached_tokens": 465920,
+      "cache_hit_rate_percent": 67.1
+    }
+  }
+}
