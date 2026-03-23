@@ -1,7 +1,7 @@
 {
   "metadata_version": "1.0",
   "created_at": "2026-03-22T18:02:24.580897",
-  "last_updated": "2026-03-22T20:44:16.759175",
+  "last_updated": "2026-03-23T13:05:08.920510",
   "site_url": "https://www.ngpf.org/bank-sim",
   "pom_files": [
     {
@@ -33,6 +33,21 @@
       "url": "",
       "file_name": "TransferHistoryPage.js",
       "file_path": "pom_tests/pom/TransferHistoryPage.js"
+    },
+    {
+      "url": "",
+      "file_name": "AccountPage.js",
+      "file_path": "pom_tests/pom/AccountPage.js"
+    },
+    {
+      "url": "",
+      "file_name": "WelcomeDialog.js",
+      "file_path": "pom_tests/pom/WelcomeDialog.js"
+    },
+    {
+      "url": "",
+      "file_name": "Sidebar.js",
+      "file_path": "pom_tests/pom/Sidebar.js"
     }
   ],
   "Login_File": {
@@ -63,14 +78,68 @@
     "pom_test_execution_error": null,
     "pom_files": null
   },
-  "User_Scenarios_File": [],
+  "User_Scenarios_File": [
+    {
+      "name": "ngpf_scenario.txt",
+      "path": "/Users/raghusharma/go/src/github.com/zb-io/ui-test-generator/ngpf_scenario.txt",
+      "hash": "3d18a079548ae52429748857d91e1365ab8f00cfd0b45b10a9dc1e9d9fc44eb5",
+      "agent_workflow_completed": true,
+      "agent_workflow_file_path": "/var/tmp/Roost/RoostGPT/roost-test/1774250530/temp_info/www.ngpf.org/extracted_data/interaction_data_e671b4a18c3b134bf1feceb05c6f372b7d3c1cd62c67f297ad8d5d0f19b45e8e.json",
+      "agent_activity_summary": [
+        "The agent initiated the test case by navigating to the application home page and successfully clicked the 'Get Started Now' button. It proceeded to interact with the Welcome dialog by clicking 'OK', then expanded the 'Accounts' section via the associated menu item. The agent accurately selected the 'Account Activity' menu, navigated to the relevant account page, and correctly clicked on the 'Saving' bar. Finally, the agent successfully verified the presence of the element with ID '1100001', confirming completion of all required scenario steps."
+      ],
+      "agent_activity_error": [
+        "No blocking errors or missteps were observed during the execution. All elements were located on the first attempt and all required actions executed without recovery steps."
+      ],
+      "agent_activity_outcome": [
+        "The agent fully achieved the user scenario's goal by executing each prescribed step in sequence and verifying the expected element, thereby completing the workflow as intended."
+      ],
+      "agent_recommendation": "No corrective actions are necessary. Maintain current selectors and flow. Regularly validate selectors to ensure continued stability with any future UI changes.",
+      "agent_completion_level": "complete",
+      "agent_steps_completed": null,
+      "execution_flow_file_path": "/private/var/tmp/Roost/RoostGPT/roost-test/1774250530/temp_info/www.ngpf.org/extracted_data/site_analysis_execution_flow_2f7e8ecf15870f89912e8627bc7caa32581119701c2af3216e6170d2462f4f29.json",
+      "systematic_selectors_file_path": "/private/var/tmp/Roost/RoostGPT/roost-test/1774250530/temp_info/www.ngpf.org/extracted_data/selectors/systematic_selectors_2f7e8ecf15870f89912e8627bc7caa32581119701c2af3216e6170d2462f4f29.json",
+      "scenario_analysis_result_file_path": "/var/tmp/Roost/RoostGPT/roost-test/1774250530/temp_info/www.ngpf.org/extracted_data/user_scenario_e671b4a18c3b134bf1feceb05c6f372b7d3c1cd62c67f297ad8d5d0f19b45e8e.json",
+      "scenario_name": "bank_simulator_-_complete_account_exploration_user_journey",
+      "scenario_file_path": "scenarios/bank_simulator_-_complete_account_exploration_user.json",
+      "feature_file_path": "scenarios/features/Discovered_Workflow_Bank_Simulator_Complete_Accoun.feature",
+      "feature_file_name": "Discovered_Workflow_Bank_Simulator_Complete_Accoun.feature",
+      "test_generated": true,
+      "test_generation_error": null,
+      "test_name": "bank_simulator___complete_account_exploration_user_journey_pom.noauth.spec.js",
+      "test_file_path": "pom_tests/bank_simulator___complete_account_exploration_user_journey_pom.noauth.spec.js",
+      "test_execution_error": null,
+      "test_executed_success": true,
+      "pom_test_name": "bank_simulator___complete_account_exploration_user_journey_pom.noauth.spec.js",
+      "pom_test_file_path": "pom_tests/bank_simulator___complete_account_exploration_user_journey_pom.noauth.spec.js",
+      "pom_test_executed_success": true,
+      "pom_test_execution_error": null,
+      "pom_files": [
+        {
+          "url": "",
+          "file_name": "AccountPage.js",
+          "file_path": "pom_tests/pom/AccountPage.js"
+        },
+        {
+          "url": "",
+          "file_name": "HomePage.js",
+          "file_path": "pom_tests/pom/HomePage.js"
+        },
+        {
+          "url": "",
+          "file_name": "Sidebar.js",
+          "file_path": "pom_tests/pom/Sidebar.js"
+        }
+      ]
+    }
+  ],
   "Exploration_Scenarios": [
     {
       "scenario_name": "e2e_business_workflow_-_complete_user_journey_01_1774191904",
       "workflow_id": "WF001",
       "scenario_file_path": "scenarios/WF001_submit_a_single_transfer_between_accounts.json",
-      "feature_file_path": null,
-      "feature_file_name": null,
+      "feature_file_path": "scenarios/features/Discovered_Workflow_e2e_business_workflow_Complete.feature",
+      "feature_file_name": "Discovered_Workflow_e2e_business_workflow_Complete.feature",
       "agent_workflow_file_path": null,
       "agent_workflow_completed": false,
       "scenario_analysis_result_file_path": null,
@@ -126,8 +195,8 @@
       "scenario_name": "partial_flow_--_partial_user_journey_due_to_empty_transfer_h_02_1774186301",
       "workflow_id": "WF002",
       "scenario_file_path": "scenarios/WF002_review_transfer_history_and_confirm_past_transfers.json",
-      "feature_file_path": null,
-      "feature_file_name": null,
+      "feature_file_path": "scenarios/features/Discovered_Workflow_partial_flow_Partial_User_Jour.feature",
+      "feature_file_name": "Discovered_Workflow_partial_flow_Partial_User_Jour.feature",
       "agent_workflow_file_path": null,
       "agent_workflow_completed": false,
       "scenario_analysis_result_file_path": null,
@@ -179,23 +248,34 @@
       "scenario_name": "bill_payment_recipient_management_-_complete_user_journey_02_1774191804",
       "workflow_id": "WF005",
       "scenario_file_path": "scenarios/WF005_add_edit_and_delete_a_bill_payment_recipient.json",
-      "feature_file_path": null,
-      "feature_file_name": null,
+      "feature_file_path": "scenarios/features/Discovered_Workflow_Bill_Payment_Recipient_Managem.feature",
+      "feature_file_name": "Discovered_Workflow_Bill_Payment_Recipient_Managem.feature",
       "agent_workflow_file_path": null,
       "agent_workflow_completed": false,
       "scenario_analysis_result_file_path": null,
       "agent_activity_summary": null,
-      "test_generated": false,
+      "test_generated": true,
       "test_generation_error": null,
       "test_name": "bill_payment_recipient_management_-_complete_user_journey_02_1774191804",
       "test_file_path": null,
       "test_executed_success": null,
       "test_execution_error": null,
-      "pom_test_name": null,
-      "pom_test_file_path": null,
-      "pom_test_executed_success": null,
+      "pom_test_name": "bill_payment_recipient_management___complete_user_journey_02_1774191804_pom.noauth.spec.js",
+      "pom_test_file_path": "pom_tests/bill_payment_recipient_management___complete_user_journey_02_1774191804_pom.noauth.spec.js",
+      "pom_test_executed_success": true,
       "pom_test_execution_error": null,
-      "pom_files": null,
+      "pom_files": [
+        {
+          "url": "",
+          "file_name": "HomePage.js",
+          "file_path": "pom_tests/pom/HomePage.js"
+        },
+        {
+          "url": "",
+          "file_name": "WelcomeDialog.js",
+          "file_path": "pom_tests/pom/WelcomeDialog.js"
+        }
+      ],
       "scenario_summary_file_path": "scenarios/summaries/WF005_add_edit_and_delete_a_bill_payment_recipient.md",
       "report_pdf_file_path": "scenarios/reports/WF005_add_edit_and_delete_a_bill_payment_recipient.pdf",
       "test_steps": [
@@ -217,23 +297,29 @@
       "scenario_name": "e2e_business_workflow_-_complete_user_journey_03_1774192414",
       "workflow_id": "WF006",
       "scenario_file_path": "scenarios/WF006_deposit_a_check_and_confirm_posting_in_account_act.json",
-      "feature_file_path": null,
-      "feature_file_name": null,
+      "feature_file_path": "scenarios/features/Discovered_Workflow_e2e_business_workflow_Complete.feature",
+      "feature_file_name": "Discovered_Workflow_e2e_business_workflow_Complete.feature",
       "agent_workflow_file_path": null,
       "agent_workflow_completed": false,
       "scenario_analysis_result_file_path": null,
       "agent_activity_summary": null,
-      "test_generated": false,
+      "test_generated": true,
       "test_generation_error": null,
       "test_name": "e2e_business_workflow_-_complete_user_journey_03_1774192414",
       "test_file_path": null,
       "test_executed_success": null,
       "test_execution_error": null,
-      "pom_test_name": null,
-      "pom_test_file_path": null,
-      "pom_test_executed_success": null,
+      "pom_test_name": "e2e_business_workflow___complete_user_journey_03_1774192414_pom.noauth.spec.js",
+      "pom_test_file_path": "pom_tests/e2e_business_workflow___complete_user_journey_03_1774192414_pom.noauth.spec.js",
+      "pom_test_executed_success": true,
       "pom_test_execution_error": null,
-      "pom_files": null,
+      "pom_files": [
+        {
+          "url": "",
+          "file_name": "HomePage.js",
+          "file_path": "pom_tests/pom/HomePage.js"
+        }
+      ],
       "scenario_summary_file_path": "scenarios/summaries/WF006_deposit_a_check_and_confirm_posting_in_account_act.md",
       "report_pdf_file_path": "scenarios/reports/WF006_deposit_a_check_and_confirm_posting_in_account_act.pdf",
       "test_steps": [
@@ -255,23 +341,29 @@
       "scenario_name": "validate_check_deposit_form_and_error_handling_--_partial_04_1774191703",
       "workflow_id": "WF007",
       "scenario_file_path": "scenarios/WF007_validate_check_deposit_form_and_error_handling.json",
-      "feature_file_path": null,
-      "feature_file_name": null,
+      "feature_file_path": "scenarios/features/Discovered_Workflow_Validate_Check_Deposit_Form_an.feature",
+      "feature_file_name": "Discovered_Workflow_Validate_Check_Deposit_Form_an.feature",
       "agent_workflow_file_path": null,
       "agent_workflow_completed": false,
       "scenario_analysis_result_file_path": null,
       "agent_activity_summary": null,
-      "test_generated": false,
+      "test_generated": true,
       "test_generation_error": null,
       "test_name": "validate_check_deposit_form_and_error_handling_--_partial_04_1774191703",
       "test_file_path": null,
       "test_executed_success": null,
       "test_execution_error": null,
-      "pom_test_name": null,
-      "pom_test_file_path": null,
-      "pom_test_executed_success": null,
+      "pom_test_name": "validate_check_deposit_form_and_error_handling____partial_04_1774191703_pom.noauth.spec.js",
+      "pom_test_file_path": "pom_tests/validate_check_deposit_form_and_error_handling____partial_04_1774191703_pom.noauth.spec.js",
+      "pom_test_executed_success": true,
       "pom_test_execution_error": null,
-      "pom_files": null,
+      "pom_files": [
+        {
+          "url": "",
+          "file_name": "HomePage.js",
+          "file_path": "pom_tests/pom/HomePage.js"
+        }
+      ],
       "scenario_summary_file_path": "scenarios/summaries/WF007_validate_check_deposit_form_and_error_handling.md",
       "report_pdf_file_path": "scenarios/reports/WF007_validate_check_deposit_form_and_error_handling.pdf",
       "test_steps": [
@@ -437,11 +529,11 @@
   "Imported_Test_Coverage": null,
   "Token_Usage": {
     "cumulative": {
-      "input_tokens": 7172530,
-      "output_tokens": 251634,
-      "cached_input_tokens": 4318848,
-      "total_tokens": 7424164,
-      "total_cost_usd": 9.87986
+      "input_tokens": 8559296,
+      "output_tokens": 286856,
+      "cached_input_tokens": 5214080,
+      "total_tokens": 8846152,
+      "total_cost_usd": 11.59232
     },
     "runs": [
       {
@@ -738,6 +830,74 @@
             "input": 16983,
             "output": 956,
             "cost": 0.041614
+          }
+        }
+      },
+      {
+        "run_type": "generate",
+        "timestamp": "2026-03-23T13:05:08.918198",
+        "provider": "azure_open_ai",
+        "model": "gpt-4.1",
+        "input_tokens": 1386766,
+        "output_tokens": 35222,
+        "cached_input_tokens": 895232,
+        "total_tokens": 1421988,
+        "cost_usd": 1.71246,
+        "sessions": {
+          "main_execution": {
+            "input": 0,
+            "output": 0,
+            "cost": 0.0
+          },
+          "extraction_agent": {
+            "input": 97323,
+            "output": 2340,
+            "cost": 0.13983
+          },
+          "scenario_llm": {
+            "input": 4771,
+            "output": 3168,
+            "cost": 0.034886
+          },
+          "pom_gen_standalone_analyzer": {
+            "input": 57153,
+            "output": 1582,
+            "cost": 0.049586
+          },
+          "llm_call": {
+            "input": 54945,
+            "output": 8098,
+            "cost": 0.174674
+          },
+          "test_gen_pom_validate_check_deposit_form_and_error_handling____partial_04_1774191703": {
+            "input": 131500,
+            "output": 1785,
+            "cost": 0.152096
+          },
+          "test_gen_pom_bill_payment_recipient_management___complete_user_journey_02_1774191804": {
+            "input": 210011,
+            "output": 1871,
+            "cost": 0.234734
+          },
+          "test_gen_pom_e2e_business_workflow___complete_user_journey_03_1774192414": {
+            "input": 142197,
+            "output": 1573,
+            "cost": 0.257234
+          },
+          "test_gen_pom_bank_simulator___complete_account_exploration_user_journey": {
+            "input": 138066,
+            "output": 1475,
+            "cost": 0.190972
+          },
+          "code_repair_validate_check_deposit_form_and_error_handling____partial_04_1774191703_pom.noauth.spec.js": {
+            "input": 76324,
+            "output": 5013,
+            "cost": 0.106736
+          },
+          "code_repair_bill_payment_recipient_management___complete_user_journey_02_1774191804_pom.noauth.spec.js": {
+            "input": 474476,
+            "output": 8317,
+            "cost": 0.371712
           }
         }
       }
