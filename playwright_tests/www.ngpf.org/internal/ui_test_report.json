@@ -1,0 +1,52 @@
+{
+  "login_scenario": "Skipped",
+  "workflow_completed": false,
+  "workflow_result": "FAIL",
+  "workflow_error": "",
+  "login_agent_activity_summary": "Not available",
+  "user_scenario_agent_activity_summary": "Not available",
+  "generated_files": {
+    "feature_files": [],
+    "json_files": []
+  },
+  "scenarios": {
+    "submit_a_single_transfer_between_accounts_01_1774186529": {
+      "test_name": "submit_a_single_transfer_between_accounts_01_1774186529",
+      "description": "Scenario run is working",
+      "testFilePath": "",
+      "extracted_data": "www.ngpf.org/extracted_data/captured_ui_data.json"
+    },
+    "partial_flow____partial_user_journey_due_to_empty_transfer_h_02_1774186301": {
+      "test_name": "partial_flow_--_partial_user_journey_due_to_empty_transfer_h_02_1774186301",
+      "description": "Scenario run is working",
+      "testFilePath": "",
+      "extracted_data": "www.ngpf.org/extracted_data/captured_ui_data.json"
+    }
+  },
+  "token_usage": {
+    "total": {
+      "input": 0,
+      "output": 0,
+      "total": 0,
+      "cost": 0.0,
+      "cached_input": 0
+    },
+    "sessions": {
+      "main_execution": {
+        "type": "root",
+        "input": 0,
+        "output": 0,
+        "total": 0,
+        "cost": 0.0,
+        "cached_input": 0,
+        "call_count": 0,
+        "start_time": 1774249652.822828,
+        "end_time": 1774249652.870791,
+        "duration": 0.04796290397644043
+      }
+    },
+    "provider": "azure_open_ai",
+    "model": "gpt-4.1",
+    "timestamp": "2026-03-23T12:37:32.871066"
+  }
+}

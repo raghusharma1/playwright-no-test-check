@@ -1,7 +1,7 @@
 {
   "metadata_version": "1.0",
   "created_at": "2026-03-22T18:02:24.580897",
-  "last_updated": "2026-03-22T20:44:16.759175",
+  "last_updated": "2026-03-23T12:37:32.873929",
   "site_url": "https://www.ngpf.org/bank-sim",
   "pom_files": [
     {
@@ -738,6 +738,24 @@
             "input": 16983,
             "output": 956,
             "cost": 0.041614
+          }
+        }
+      },
+      {
+        "run_type": "generate",
+        "timestamp": "2026-03-23T12:37:32.871066",
+        "provider": "azure_open_ai",
+        "model": "gpt-4.1",
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cached_input_tokens": 0,
+        "total_tokens": 0,
+        "cost_usd": 0.0,
+        "sessions": {
+          "main_execution": {
+            "input": 0,
+            "output": 0,
+            "cost": 0.0
           }
         }
       }
