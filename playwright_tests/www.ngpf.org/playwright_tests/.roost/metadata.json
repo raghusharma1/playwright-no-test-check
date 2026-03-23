@@ -1,7 +1,7 @@
 {
   "metadata_version": "1.0",
   "created_at": "2026-03-22T18:02:24.580897",
-  "last_updated": "2026-03-22T20:44:16.759175",
+  "last_updated": "2026-03-23T12:08:16.942579",
   "site_url": "https://www.ngpf.org/bank-sim",
   "pom_files": [
     {
@@ -33,6 +33,21 @@
       "url": "",
       "file_name": "TransferHistoryPage.js",
       "file_path": "pom_tests/pom/TransferHistoryPage.js"
+    },
+    {
+      "url": "",
+      "file_name": "Sidebar.js",
+      "file_path": "pom_tests/pom/Sidebar.js"
+    },
+    {
+      "url": "",
+      "file_name": "DepositCheckPage.js",
+      "file_path": "pom_tests/pom/DepositCheckPage.js"
+    },
+    {
+      "url": "",
+      "file_name": "AccountActivityPage.js",
+      "file_path": "pom_tests/pom/AccountActivityPage.js"
     }
   ],
   "Login_File": {
@@ -214,7 +229,7 @@
       ]
     },
     {
-      "scenario_name": "e2e_business_workflow_-_complete_user_journey_03_1774192414",
+      "scenario_name": "e2e_business_workflow_-_complete_user_journey_06_1774247273",
       "workflow_id": "WF006",
       "scenario_file_path": "scenarios/WF006_deposit_a_check_and_confirm_posting_in_account_act.json",
       "feature_file_path": null,
@@ -223,32 +238,54 @@
       "agent_workflow_completed": false,
       "scenario_analysis_result_file_path": null,
       "agent_activity_summary": null,
-      "test_generated": false,
+      "test_generated": true,
       "test_generation_error": null,
-      "test_name": "e2e_business_workflow_-_complete_user_journey_03_1774192414",
+      "test_name": "e2e_business_workflow_-_complete_user_journey_06_1774247273",
       "test_file_path": null,
       "test_executed_success": null,
       "test_execution_error": null,
-      "pom_test_name": null,
-      "pom_test_file_path": null,
-      "pom_test_executed_success": null,
+      "pom_test_name": "e2e_business_workflow___complete_user_journey_06_1774247273_pom.noauth.spec.js",
+      "pom_test_file_path": "pom_tests/e2e_business_workflow___complete_user_journey_06_1774247273_pom.noauth.spec.js",
+      "pom_test_executed_success": true,
       "pom_test_execution_error": null,
-      "pom_files": null,
+      "pom_files": [
+        {
+          "url": "",
+          "file_name": "HomePage.js",
+          "file_path": "pom_tests/pom/HomePage.js"
+        },
+        {
+          "url": "",
+          "file_name": "Sidebar.js",
+          "file_path": "pom_tests/pom/Sidebar.js"
+        },
+        {
+          "url": "",
+          "file_name": "DepositCheckPage.js",
+          "file_path": "pom_tests/pom/DepositCheckPage.js"
+        },
+        {
+          "url": "",
+          "file_name": "AccountActivityPage.js",
+          "file_path": "pom_tests/pom/AccountActivityPage.js"
+        }
+      ],
       "scenario_summary_file_path": "scenarios/summaries/WF006_deposit_a_check_and_confirm_posting_in_account_act.md",
       "report_pdf_file_path": "scenarios/reports/WF006_deposit_a_check_and_confirm_posting_in_account_act.pdf",
       "test_steps": [
         "Navigate to homepage: Load homepage",
-        "Click 'GET STARTED NOW' button: Enter the Bank Simulator by clicking 'GET STARTED NOW'.",
-        "Click 'Ok' on welcome modal: Acknowledge the welcome modal to proceed.",
-        "Click 'DEPOSIT CHECKS' in sidebar: Navigate to check deposit simulation screen.",
-        "Open 'To' account dropdown: Expand account selection dropdown menu for deposit.",
-        "Select 'CHECKING' account option: Choose 'CHECKING (Available Balance is $216.04)' from account options.",
-        "Fill 'Amount' field: Input check amount: 100.00",
-        "Click 'Front' button to upload check front: Initiate upload of check's front image.",
-        "Click 'close' icon on front image modal: Close the modal displaying the front image.",
-        "Click 'Back' button to upload check back: Trigger upload for the back side of the check.",
-        "Click 'close' icon on back image modal: Close back image modal to continue deposit.",
-        "Click 'Submit' button: Submit the check deposit simulation form."
+        "Click 'GET STARTED NOW' button: Begin simulator by clicking start",
+        "Click 'Ok' on welcome dialog: Dismiss intro modal",
+        "Click 'DEPOSIT CHECKS' in sidebar: Go to deposit checks feature area",
+        "Click 'To' account dropdown: Open account selection dropdown",
+        "Select 'CHECKING' account from dropdown: Choose checking account",
+        "Input amount '100.00': Enter deposit amount",
+        "Click 'Front' upload button: Trigger front check image upload (simulation)",
+        "Click 'Back' upload button: Trigger back check image upload (simulation)",
+        "Close front check modal (click 'close' icon): Dismiss image preview for front check",
+        "Close back check modal (click 'close' icon): Dismiss image preview for back check",
+        "Click 'Submit' to complete deposit: Submit deposit form",
+        "Verify deposit confirmation and new activity record: Ensure deposit success banner and ledger row are present"
       ]
     },
     {
@@ -378,7 +415,7 @@
       "scenario_file_path": "scenarios/WF006_deposit_a_check_and_confirm_posting_in_account_act.json",
       "scenario_summary_file_path": "scenarios/summaries/WF006_deposit_a_check_and_confirm_posting_in_account_act.md",
       "report_pdf_file_path": "scenarios/reports/WF006_deposit_a_check_and_confirm_posting_in_account_act.pdf",
-      "linked_scenario_name": "e2e_business_workflow_-_complete_user_journey_03_1774192414",
+      "linked_scenario_name": "e2e_business_workflow_-_complete_user_journey_06_1774247273",
       "error": null
     },
     {
@@ -437,11 +474,11 @@
   "Imported_Test_Coverage": null,
   "Token_Usage": {
     "cumulative": {
-      "input_tokens": 7172530,
-      "output_tokens": 251634,
-      "cached_input_tokens": 4318848,
-      "total_tokens": 7424164,
-      "total_cost_usd": 9.87986
+      "input_tokens": 7792397,
+      "output_tokens": 273470,
+      "cached_input_tokens": 4792320,
+      "total_tokens": 8065867,
+      "total_cost_usd": 10.584074
     },
     "runs": [
       {
@@ -738,6 +775,72 @@
             "input": 16983,
             "output": 956,
             "cost": 0.041614
+          }
+        }
+      },
+      {
+        "run_type": "retrigger_workers",
+        "timestamp": "2026-03-23T11:58:14.404491",
+        "provider": "azure_open_ai",
+        "model": "gpt-4.1",
+        "input_tokens": 168306,
+        "output_tokens": 9871,
+        "cached_input_tokens": 94592,
+        "total_tokens": 178177,
+        "cost_usd": 0.273692,
+        "sessions": {
+          "worker_supervisor_WF006": {
+            "input": 2438,
+            "output": 105,
+            "cost": 0.005716
+          },
+          "explore_worker_WF006_a1": {
+            "input": 137519,
+            "output": 4168,
+            "cost": 0.168798
+          },
+          "explore_synthesize_single_workflow": {
+            "input": 14860,
+            "output": 4959,
+            "cost": 0.067088
+          },
+          "report_curation_WF006": {
+            "input": 13489,
+            "output": 639,
+            "cost": 0.03209
+          }
+        }
+      },
+      {
+        "run_type": "retrigger",
+        "timestamp": "2026-03-23T12:08:16.941328",
+        "provider": "azure_open_ai",
+        "model": "gpt-4.1",
+        "input_tokens": 451561,
+        "output_tokens": 11965,
+        "cached_input_tokens": 378880,
+        "total_tokens": 463526,
+        "cost_usd": 0.430522,
+        "sessions": {
+          "post_explore_testgen": {
+            "input": 0,
+            "output": 0,
+            "cost": 0.0
+          },
+          "pom_gen_e2e_business_workflow_-_complete_user_journey_06_1774247273": {
+            "input": 80971,
+            "output": 3732,
+            "cost": 0.080054
+          },
+          "test_gen_pom_e2e_business_workflow___complete_user_journey_06_1774247273": {
+            "input": 153610,
+            "output": 2008,
+            "cost": 0.1069
+          },
+          "code_repair_e2e_business_workflow___complete_user_journey_06_1774247273_pom.noauth.spec.js": {
+            "input": 216980,
+            "output": 6225,
+            "cost": 0.243568
           }
         }
       }
