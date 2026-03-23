@@ -1,0 +1,387 @@
+{
+  "site_url": "https://www.ngpf.org/bank-sim",
+  "site_type": "unknown",
+  "site_category": "general",
+  "test_name": "partial_-_account_activity_journey_steps_1-7_only",
+  "login_mechanisms": [
+    "content_browsing",
+    "site_navigation"
+  ],
+  "user_journeys": [
+    {
+      "workflow_type": "navigation_flow",
+      "path": [
+        "profile_page",
+        "bank-sim"
+      ],
+      "success_rate": "discovered_site_navigation",
+      "scenario_priority": "medium",
+      "description": "General website navigation and content discovery"
+    }
+  ],
+  "proposed_scenarios": [
+    {
+      "scenario_name": "Discovered Workflow: Partial - Account Activity Journey (Steps 1-7 Only)",
+      "description": "Partial scenario covering steps from onboarding up to the account activity table assertion check, as executed by the agent (excluding scenario completion and assertion success).",
+      "workflow_narrative": "A user begins at the NGFP BankSim homepage, clicks 'Get Started Now', passes through two welcome dialogs, navigates through the accounts menu, selects 'Account Activity', clicks the 'Saving' bar, and is taken to the account view screen—where the test stops before assertion, reflecting the agent's actual execution.",
+      "playwright_implementation_guidance": [
+        "Use waitForSelector for modals/dialogs as interactions require sequential handling.",
+        "Prefer role-based selectors for buttons and dialogs for stable targeting.",
+        "If 'web_component_parent' is present, use Playwright's Shadow DOM support or sequential pressing as needed.",
+        "Ensure navigation actions await page load before proceeding.",
+        "Stop scenario at step 7 (assertion attempt on ID)."
+      ],
+      "test_type": "e2e_business_workflow",
+      "priority": "critical",
+      "business_goal": "Verify user can successfully complete navigation steps to the account activity view.",
+      "user_story": "As a student, I want to start the banking simulation and explore my account activity so that I can learn how to navigate online banking tools.",
+      "detailed_steps": [
+        {
+          "step_number": 1,
+          "action": "Navigate to homepage",
+          "component": "Navigation",
+          "description": "Load NGFP BankSim homepage",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/home?returnUrl=%2F",
+          "verification_point": "Page loaded",
+          "business_impact": "Site accessibility for new users",
+          "selector": "page.goto('https://www.ngpf.org/bank-sim/home?returnUrl=%2F', { waitUntil: 'domcontentloaded' })",
+          "confidence": 100,
+          "based_on_interaction": true,
+          "all_selectors": [],
+          "web_component_parent": null,
+          "page_context": {
+            "suggested_page_class": "HomePage",
+            "page_url_pattern": "/home"
+          },
+          "method_context": {
+            "suggested_method_name": "navigateToHomepage",
+            "action_type": "navigation"
+          }
+        },
+        {
+          "step_number": 2,
+          "action": "Click",
+          "component": "Welcome Landing",
+          "description": "Click 'GET STARTED NOW' button to begin simulation workflow",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/home?returnUrl=%2F",
+          "verification_point": "'GET STARTED NOW' button disappears and welcome dialog/modal appears",
+          "business_impact": "Enables access to banking features",
+          "selector": "page.getByRole('button', { name: 'GET STARTED NOW' })",
+          "all_selectors": [
+            {
+              "selector": "page.getByRole('button', { name: 'GET STARTED NOW' })",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByRole('button', { name: /GET STARTED NOW/ })",
+              "strategy": "role_name_regex",
+              "confidence": 95,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByText('GET STARTED NOW')",
+              "strategy": "text",
+              "confidence": 88,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('button.mat-focus-indicator.button')",
+              "strategy": "css_combined_classes",
+              "confidence": 80,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('button.mat-focus-indicator')",
+              "strategy": "css_stable_class",
+              "confidence": 78,
+              "is_unique": true
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "mat-card-content",
+            "attributes": {
+              "_ngcontent-uoy-c143": "",
+              "class": "mat-card-content"
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "HomePage",
+            "page_url_pattern": "/home"
+          },
+          "method_context": {
+            "suggested_method_name": "clickGetStarted",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 3,
+          "action": "Click",
+          "component": "Welcome Dialog / Continue Session",
+          "description": "Click 'CONTINUE SESSION' button to pass through welcome dialog/modal",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/",
+          "verification_point": "'CONTINUE SESSION' dialog disappears, application proceeds to next onboarding dialog",
+          "business_impact": "Allows user to resume/continue simulation",
+          "selector": "page.locator('button.mat-focus-indicator.button')",
+          "all_selectors": [
+            {
+              "selector": "page.locator('button.mat-focus-indicator.button')",
+              "strategy": "css_combined_classes",
+              "confidence": 50,
+              "is_unique": false
+            }
+          ],
+          "confidence": 50,
+          "based_on_interaction": true,
+          "web_component_parent": null,
+          "page_context": {
+            "suggested_page_class": "WelcomeDialogPage",
+            "page_url_pattern": "/"
+          },
+          "method_context": {
+            "suggested_method_name": "clickContinueSession",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 4,
+          "action": "Click",
+          "component": "Welcome Dialog - Ok Button",
+          "description": "Click 'Ok' button to close the second welcome dialog",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/",
+          "verification_point": "Dialog closes, menu sidebar becomes accessible",
+          "business_impact": "Unlocks main banking menu",
+          "selector": "page.getByRole('button', { name: 'Ok' })",
+          "all_selectors": [
+            {
+              "selector": "page.getByRole('button', { name: 'Ok' })",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('[role=\"dialog\"]').getByRole('button', { name: 'Ok' })",
+              "strategy": "portal_role_name",
+              "confidence": 95,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByRole('button', { name: 'Ok' })",
+              "strategy": "role_name",
+              "confidence": 95,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('[role=\"dialog\"]').getByRole('button', { name: 'Ok' })",
+              "strategy": "parent_role_child_role",
+              "confidence": 88,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByText('Ok')",
+              "strategy": "text",
+              "confidence": 88,
+              "is_unique": true
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "app-welcome-dialog",
+            "attributes": {
+              "_nghost-uoy-c147": "",
+              "class": "ng-star-inserted",
+              "style": ""
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "WelcomeDialogPage",
+            "page_url_pattern": "/"
+          },
+          "method_context": {
+            "suggested_method_name": "clickOkOnDialog",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 5,
+          "action": "Click",
+          "component": "Sidebar Menu - Accounts",
+          "description": "Click 'ACCOUNTS' in sidebar menu to navigate to account features",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/",
+          "verification_point": "'ACCOUNTS' submenu expands, displaying account activity option",
+          "business_impact": "Enables account management navigation",
+          "selector": "page.locator('a').filter({ hasText: 'ACCOUNTS expand_more' })",
+          "all_selectors": [
+            {
+              "selector": "page.locator('a').filter({ hasText: 'ACCOUNTS expand_more' })",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('a').filter({ hasText: 'ACCOUNTS expand_more' })",
+              "strategy": "tag_filter_text",
+              "confidence": 69,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('a.mat-list-item.mat-focus-indicator')",
+              "strategy": "css_combined_classes",
+              "confidence": 62,
+              "is_unique": false
+            },
+            {
+              "selector": "page.locator('a.mat-list-item')",
+              "strategy": "css_stable_class",
+              "confidence": 60,
+              "is_unique": false
+            },
+            {
+              "selector": "page.locator('xpath=html/body/app-root/app-main/mat-drawer-container/mat-drawer/div/mat-nav-list/app-menu-list-item[3]/a')",
+              "strategy": "xpath",
+              "confidence": 50,
+              "is_unique": true
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "app-menu-list-item",
+            "attributes": {
+              "_ngcontent-uoy-c146": "",
+              "_nghost-uoy-c145": "",
+              "class": "ng-tns-c145-3 ng-star-inserted",
+              "aria-expanded": "false",
+              "style": ""
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "SidebarMenu",
+            "page_url_pattern": "/"
+          },
+          "method_context": {
+            "suggested_method_name": "clickAccountsMenu",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 6,
+          "action": "Click",
+          "component": "Nav Menu",
+          "description": "Click 'ACCOUNT ACTIVITY' in the expanded menu to access account details",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/",
+          "verification_point": "Account activity view loads",
+          "business_impact": "Permits review of account transactions and balances",
+          "selector": "page.locator('a').filter({ hasText: 'ACCOUNT ACTIVITY' })",
+          "all_selectors": [
+            {
+              "selector": "page.locator('a').filter({ hasText: 'ACCOUNT ACTIVITY' })",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('a').filter({ hasText: /^ACCOUNT ACTIVITY$/ })",
+              "strategy": "link_filter_exact",
+              "confidence": 74,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('a').filter({ hasText: 'ACCOUNT ACTIVITY' })",
+              "strategy": "tag_filter_text",
+              "confidence": 69,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('xpath=html/body/app-root/app-main/mat-drawer-container/mat-drawer/div/mat-nav-list/app-menu-list-item[3]/div/app-menu-list-item[1]/a')",
+              "strategy": "xpath",
+              "confidence": 50,
+              "is_unique": true
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "app-menu-list-item",
+            "attributes": {
+              "_ngcontent-uoy-c145": "",
+              "_nghost-uoy-c145": "",
+              "class": "ng-tns-c145-13 ng-tns-c145-3 ng-star-inserted",
+              "aria-expanded": "false"
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "AccountActivityMenu",
+            "page_url_pattern": "/"
+          },
+          "method_context": {
+            "suggested_method_name": "clickAccountActivityMenu",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 7,
+          "action": "Click",
+          "component": "Saving Bar",
+          "description": "Click 'VIEW ACCOUNT' (Saving Bar) to select savings account details",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/account",
+          "verification_point": "Savings account transaction table becomes visible",
+          "business_impact": "Displays user-specific saving transactions and balance",
+          "selector": "page.getByText('VIEW ACCOUNT')",
+          "all_selectors": [
+            {
+              "selector": "page.getByText('VIEW ACCOUNT')",
+              "strategy": "text",
+              "confidence": 88,
+              "is_unique": true
+            }
+          ],
+          "confidence": 88,
+          "based_on_interaction": true,
+          "web_component_parent": null,
+          "page_context": {
+            "suggested_page_class": "AccountActivityPage",
+            "page_url_pattern": "/account"
+          },
+          "method_context": {
+            "suggested_method_name": "clickViewAccount",
+            "action_type": "click"
+          }
+        }
+      ],
+      "expected_results": [
+        "User successfully navigates from homepage through onboarding dialogs to the account activity view and savings details.",
+        "UI components display appropriately with no errors."
+      ],
+      "edge_cases_to_test": [
+        "Slow network causing delayed dialog/modal load",
+        "Unexpected modal overlays",
+        "Sidebar failing to expand",
+        "Missing account activity option"
+      ],
+      "data_requirements": [
+        "Enabled test accounts for simulation",
+        "Valid session without expired tokens"
+      ],
+      "prerequisites": [
+        "Site accessible and all UI APIs functioning",
+        "No modal/dialog lockouts present"
+      ],
+      "auth_required": false,
+      "starting_url": null
+    }
+  ],
+  "login_completion_state": "successful",
+  "analysis_timestamp": "2026-03-23T19:22:24.033681",
+  "confidence_score": 0.5,
+  "auth_required": false,
+  "starting_url": null
+}

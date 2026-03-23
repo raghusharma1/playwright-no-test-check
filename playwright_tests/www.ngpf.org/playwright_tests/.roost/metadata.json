@@ -1,7 +1,7 @@
 {
   "metadata_version": "1.0",
   "created_at": "2026-03-22T18:02:24.580897",
-  "last_updated": "2026-03-22T20:44:16.759175",
+  "last_updated": "2026-03-23T19:27:52.522467",
   "site_url": "https://www.ngpf.org/bank-sim",
   "pom_files": [
     {
@@ -33,6 +33,16 @@
       "url": "",
       "file_name": "TransferHistoryPage.js",
       "file_path": "pom_tests/pom/TransferHistoryPage.js"
+    },
+    {
+      "url": "https://www.ngpf.org/bank-sim/home?returnUrl=%2F",
+      "file_name": "HomePage.js",
+      "file_path": "/var/tmp/Roost/RoostGPT/roost-test/1774273769/source/playwright-no-test-check/playwright_tests/www.ngpf.org/playwright_tests/pom_tests/pom/HomePage.js"
+    },
+    {
+      "url": "https://www.ngpf.org/bank-sim/account",
+      "file_name": "AccountActivityMenu.js",
+      "file_path": "/var/tmp/Roost/RoostGPT/roost-test/1774273769/source/playwright-no-test-check/playwright_tests/www.ngpf.org/playwright_tests/pom_tests/pom/AccountActivityMenu.js"
     }
   ],
   "Login_File": {
@@ -63,14 +73,61 @@
     "pom_test_execution_error": null,
     "pom_files": null
   },
-  "User_Scenarios_File": [],
+  "User_Scenarios_File": [
+    {
+      "name": "ngpf_scenario.txt",
+      "path": "/var/tmp/Roost/RoostGPT/roost-test/1774273769/ngpf_scenario.txt",
+      "hash": "3d18a079548ae52429748857d91e1365ab8f00cfd0b45b10a9dc1e9d9fc44eb5",
+      "agent_workflow_completed": false,
+      "agent_workflow_file_path": "/var/tmp/Roost/RoostGPT/roost-test/1774273769/temp_info/www.ngpf.org/extracted_data/interaction_data_c24e2adeb6ba28853432db9144f853f6627c5d889324ebb9ccacecb50d3c1e9f.json",
+      "agent_activity_summary": [
+        "Agent navigated through all required steps of the Account Activity scenario as outlined. The agent initiated the process by clicking the 'Get Started Now' button, advanced past session dialogs, and accessed menu items in sequence: 'Accounts', 'Account Activity', and 'Saving Bar'. At the verification step, the agent searched for ID '1100001' in the account activity table but did not locate it. All scenario steps up to verification were executed successfully, but the final user goal was not achieved due to the missing ID."
+      ],
+      "agent_activity_error": [
+        "At step 7, the agent searched for ID '1100001' as specified but found no matches on the page. No errors occurred in earlier navigation or element selection steps; the only blocking issue was the absence of the target ID, resulting in scenario incompletion. No recovery was possible for the final assertion."
+      ],
+      "agent_activity_outcome": [
+        "The scenario was executed as intended up to the verification action; however, the required account ID '1100001' was not found, resulting in partial completion of the user goal. The agent performed all preparatory steps but was unable to complete the objective due to the failed assertion."
+      ],
+      "agent_recommendation": "Review the test data for the target account ID '1100001' and verify its availability in the expected state before test execution. Ensure prerequisites are met and consider adding robust validation steps, or retry with known-good test data to achieve scenario completion.",
+      "agent_completion_level": "partial",
+      "agent_steps_completed": null,
+      "scenario_analysis_result_file_path": "/var/tmp/Roost/RoostGPT/roost-test/1774273769/temp_info/www.ngpf.org/extracted_data/user_scenario_c24e2adeb6ba28853432db9144f853f6627c5d889324ebb9ccacecb50d3c1e9f.json",
+      "scenario_name": "partial_-_account_activity_journey_steps_1-7_only",
+      "scenario_file_path": "scenarios/partial_-_account_activity_journey_steps_1-7_only.json",
+      "feature_file_path": "scenarios/features/Discovered_Workflow_Partial_Account_Activity_Journ.feature",
+      "feature_file_name": "Discovered_Workflow_Partial_Account_Activity_Journ.feature",
+      "test_generated": false,
+      "test_generation_error": null,
+      "test_name": "partial___account_activity_journey_steps_1_7_only_pom.noauth.spec.js",
+      "test_file_path": "pom_tests/partial___account_activity_journey_steps_1_7_only_pom.noauth.spec.js",
+      "test_execution_error": null,
+      "test_executed_success": true,
+      "pom_test_name": "partial___account_activity_journey_steps_1_7_only_pom.noauth.spec.js",
+      "pom_test_file_path": "pom_tests/partial___account_activity_journey_steps_1_7_only_pom.noauth.spec.js",
+      "pom_test_executed_success": true,
+      "pom_test_execution_error": null,
+      "pom_files": [
+        {
+          "url": "https://www.ngpf.org/bank-sim/home?returnUrl=%2F",
+          "file_name": "HomePage.js",
+          "file_path": "/var/tmp/Roost/RoostGPT/roost-test/1774273769/source/playwright-no-test-check/playwright_tests/www.ngpf.org/playwright_tests/pom_tests/pom/HomePage.js"
+        },
+        {
+          "url": "https://www.ngpf.org/bank-sim/account",
+          "file_name": "AccountActivityMenu.js",
+          "file_path": "/var/tmp/Roost/RoostGPT/roost-test/1774273769/source/playwright-no-test-check/playwright_tests/www.ngpf.org/playwright_tests/pom_tests/pom/AccountActivityMenu.js"
+        }
+      ]
+    }
+  ],
   "Exploration_Scenarios": [
     {
       "scenario_name": "e2e_business_workflow_-_complete_user_journey_01_1774191904",
       "workflow_id": "WF001",
       "scenario_file_path": "scenarios/WF001_submit_a_single_transfer_between_accounts.json",
-      "feature_file_path": null,
-      "feature_file_name": null,
+      "feature_file_path": "scenarios/features/Discovered_Workflow_e2e_business_workflow_Complete.feature",
+      "feature_file_name": "Discovered_Workflow_e2e_business_workflow_Complete.feature",
       "agent_workflow_file_path": null,
       "agent_workflow_completed": false,
       "scenario_analysis_result_file_path": null,
@@ -126,8 +183,8 @@
       "scenario_name": "partial_flow_--_partial_user_journey_due_to_empty_transfer_h_02_1774186301",
       "workflow_id": "WF002",
       "scenario_file_path": "scenarios/WF002_review_transfer_history_and_confirm_past_transfers.json",
-      "feature_file_path": null,
-      "feature_file_name": null,
+      "feature_file_path": "scenarios/features/Discovered_Workflow_partial_flow_Partial_User_Jour.feature",
+      "feature_file_name": "Discovered_Workflow_partial_flow_Partial_User_Jour.feature",
       "agent_workflow_file_path": null,
       "agent_workflow_completed": false,
       "scenario_analysis_result_file_path": null,
@@ -179,8 +236,8 @@
       "scenario_name": "bill_payment_recipient_management_-_complete_user_journey_02_1774191804",
       "workflow_id": "WF005",
       "scenario_file_path": "scenarios/WF005_add_edit_and_delete_a_bill_payment_recipient.json",
-      "feature_file_path": null,
-      "feature_file_name": null,
+      "feature_file_path": "scenarios/features/Discovered_Workflow_Bill_Payment_Recipient_Managem.feature",
+      "feature_file_name": "Discovered_Workflow_Bill_Payment_Recipient_Managem.feature",
       "agent_workflow_file_path": null,
       "agent_workflow_completed": false,
       "scenario_analysis_result_file_path": null,
@@ -191,9 +248,9 @@
       "test_file_path": null,
       "test_executed_success": null,
       "test_execution_error": null,
-      "pom_test_name": null,
-      "pom_test_file_path": null,
-      "pom_test_executed_success": null,
+      "pom_test_name": "bill_payment_recipient_management___complete_user_journey_02_1774191804_pom.noauth.spec.js",
+      "pom_test_file_path": "pom_tests/bill_payment_recipient_management___complete_user_journey_02_1774191804_pom.noauth.spec.js",
+      "pom_test_executed_success": true,
       "pom_test_execution_error": null,
       "pom_files": null,
       "scenario_summary_file_path": "scenarios/summaries/WF005_add_edit_and_delete_a_bill_payment_recipient.md",
@@ -217,8 +274,8 @@
       "scenario_name": "e2e_business_workflow_-_complete_user_journey_03_1774192414",
       "workflow_id": "WF006",
       "scenario_file_path": "scenarios/WF006_deposit_a_check_and_confirm_posting_in_account_act.json",
-      "feature_file_path": null,
-      "feature_file_name": null,
+      "feature_file_path": "scenarios/features/Discovered_Workflow_e2e_business_workflow_Complete.feature",
+      "feature_file_name": "Discovered_Workflow_e2e_business_workflow_Complete.feature",
       "agent_workflow_file_path": null,
       "agent_workflow_completed": false,
       "scenario_analysis_result_file_path": null,
@@ -229,9 +286,9 @@
       "test_file_path": null,
       "test_executed_success": null,
       "test_execution_error": null,
-      "pom_test_name": null,
-      "pom_test_file_path": null,
-      "pom_test_executed_success": null,
+      "pom_test_name": "e2e_business_workflow___complete_user_journey_03_1774192414_pom.noauth.spec.js",
+      "pom_test_file_path": "pom_tests/e2e_business_workflow___complete_user_journey_03_1774192414_pom.noauth.spec.js",
+      "pom_test_executed_success": true,
       "pom_test_execution_error": null,
       "pom_files": null,
       "scenario_summary_file_path": "scenarios/summaries/WF006_deposit_a_check_and_confirm_posting_in_account_act.md",
@@ -255,8 +312,8 @@
       "scenario_name": "validate_check_deposit_form_and_error_handling_--_partial_04_1774191703",
       "workflow_id": "WF007",
       "scenario_file_path": "scenarios/WF007_validate_check_deposit_form_and_error_handling.json",
-      "feature_file_path": null,
-      "feature_file_name": null,
+      "feature_file_path": "scenarios/features/Discovered_Workflow_Validate_Check_Deposit_Form_an.feature",
+      "feature_file_name": "Discovered_Workflow_Validate_Check_Deposit_Form_an.feature",
       "agent_workflow_file_path": null,
       "agent_workflow_completed": false,
       "scenario_analysis_result_file_path": null,
@@ -267,9 +324,9 @@
       "test_file_path": null,
       "test_executed_success": null,
       "test_execution_error": null,
-      "pom_test_name": null,
-      "pom_test_file_path": null,
-      "pom_test_executed_success": null,
+      "pom_test_name": "validate_check_deposit_form_and_error_handling____partial_04_1774191703_pom.noauth.spec.js",
+      "pom_test_file_path": "pom_tests/validate_check_deposit_form_and_error_handling____partial_04_1774191703_pom.noauth.spec.js",
+      "pom_test_executed_success": true,
       "pom_test_execution_error": null,
       "pom_files": null,
       "scenario_summary_file_path": "scenarios/summaries/WF007_validate_check_deposit_form_and_error_handling.md",
