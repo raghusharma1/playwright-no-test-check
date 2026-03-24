@@ -1,0 +1,38 @@
+{
+  "accessibility_tree": {
+    "role": "WebArea",
+    "name": "Bank Simulator - NGPF",
+    "children": [
+      {
+        "role": "dialog",
+        "name": "",
+        "focused": true,
+        "modal": true,
+        "children": [
+          {
+            "role": "heading",
+            "name": "Account Number",
+            "level": 2
+          },
+          {
+            "role": "text",
+            "name": "#100000111"
+          },
+          {
+            "role": "heading",
+            "name": "Routing Number",
+            "level": 2
+          },
+          {
+            "role": "text",
+            "name": "#120000111"
+          }
+        ]
+      }
+    ]
+  },
+  "url": "https://www.ngpf.org/bank-sim/account",
+  "all_page_urls": [
+    "https://www.ngpf.org/bank-sim/account"
+  ]
+}
