@@ -1,0 +1,219 @@
+{
+  "metadata_version": "1.0",
+  "created_at": "2026-03-24T13:24:13.149529",
+  "last_updated": "2026-03-24T13:40:50.498180",
+  "site_url": "https://www.ngpf.org/bank-sim",
+  "pom_files": [
+    {
+      "url": "",
+      "file_name": "HomePage.js",
+      "file_path": "pom_tests/pom/HomePage.js"
+    },
+    {
+      "url": "",
+      "file_name": "AccountMenuPage.js",
+      "file_path": "pom_tests/pom/AccountMenuPage.js"
+    },
+    {
+      "url": "",
+      "file_name": "WelcomeDialog.js",
+      "file_path": "pom_tests/pom/WelcomeDialog.js"
+    },
+    {
+      "url": "",
+      "file_name": "AccountDetailPage.js",
+      "file_path": "pom_tests/pom/AccountDetailPage.js"
+    }
+  ],
+  "Login_File": {
+    "name": null,
+    "path": null,
+    "hash": null,
+    "agent_workflow_completed": false,
+    "agent_workflow_file_path": null,
+    "agent_interaction_file_path": null,
+    "agent_activity_summary": null,
+    "agent_activity_error": null,
+    "agent_activity_outcome": null,
+    "agent_recommendation": null,
+    "agent_completion_level": null,
+    "agent_steps_completed": null,
+    "execution_flow_file_path": null,
+    "systematic_selectors_file_path": null,
+    "scenario_name": null,
+    "scenario_file_path": null,
+    "test_generated": false,
+    "test_generation_error": null,
+    "test_file_path": null,
+    "test_executed_success": null,
+    "test_execution_error": null,
+    "pom_test_name": null,
+    "pom_test_file_path": null,
+    "pom_test_executed_success": null,
+    "pom_test_execution_error": null,
+    "pom_files": null
+  },
+  "User_Scenarios_File": [
+    {
+      "name": "ngpf_scenario.txt",
+      "path": "/var/tmp/Roost/RoostGPT/roost-test/1774338809/ngpf_scenario.txt",
+      "hash": "3d18a079548ae52429748857d91e1365ab8f00cfd0b45b10a9dc1e9d9fc44eb5",
+      "agent_workflow_completed": true,
+      "agent_workflow_file_path": "/var/tmp/Roost/RoostGPT/roost-test/1774338809/temp_info/www.ngpf.org/extracted_data/interaction_data_da2a4f7138bc6dfd305ddfab19b7c2ee37115fbd3f8c5fa0d160599b18a82664.json",
+      "agent_activity_summary": [
+        "The agent navigated to the home page and located the 'GET STARTED NOW' button, initiating onboarding. It identified and clicked multiple onboarding dialogs, including a general 'OK' button and a dedicated 'Ok' button, ensuring the workflow proceeded. The agent successfully accessed the 'ACCOUNTS' section, followed by the selection of the 'ACCOUNT ACTIVITY' menu item. It then clicked 'VIEW ACCOUNT' under the 'Saving' account bar. Finally, the agent verified account details, completing all steps as outlined in the user scenario."
+      ],
+      "agent_activity_error": [
+        "There was a potential ambiguity during the onboarding dialog interaction: the agent first clicked a generic 'OK' button with lower selector confidence, followed by a specific 'Ok' button with high confidence. The agent effectively recovered by ensuring both relevant dialogs were dismissed, enabling uninterrupted progress toward the scenario goal. No critical errors occurred."
+      ],
+      "agent_activity_outcome": [
+        "The agent successfully executed all steps of the Original User Scenario, confirming completion of onboarding and verification of account activity. The final account details were visible as required."
+      ],
+      "agent_recommendation": "Improve onboarding dialog selector stability to reduce ambiguity. Consolidate dialog handling steps to prevent duplicate actions and streamline the onboarding sequence. Verify that confidence scores are consistently high for all critical UI elements.",
+      "agent_completion_level": "complete",
+      "agent_steps_completed": null,
+      "execution_flow_file_path": "/var/tmp/Roost/RoostGPT/roost-test/1774338809/temp_info/www.ngpf.org/extracted_data/site_analysis_execution_flow_65d0fbc63d409e6b7d8ed1d91703343108bb481f34be6e7fbaa3f41a5bbb2498.json",
+      "systematic_selectors_file_path": "/var/tmp/Roost/RoostGPT/roost-test/1774338809/temp_info/www.ngpf.org/extracted_data/selectors/systematic_selectors_65d0fbc63d409e6b7d8ed1d91703343108bb481f34be6e7fbaa3f41a5bbb2498.json",
+      "scenario_analysis_result_file_path": "/var/tmp/Roost/RoostGPT/roost-test/1774338809/temp_info/www.ngpf.org/extracted_data/user_scenario_da2a4f7138bc6dfd305ddfab19b7c2ee37115fbd3f8c5fa0d160599b18a82664.json",
+      "scenario_name": "bank_sim_onboarding_account_activity_verification_-_complete",
+      "scenario_file_path": "scenarios/bank_sim_onboarding_account_activity_verification.json",
+      "feature_file_path": "scenarios/features/Bank_Sim_Onboarding_Account_Activity_Verification.feature",
+      "feature_file_name": "Bank_Sim_Onboarding_Account_Activity_Verification.feature",
+      "test_generated": true,
+      "test_generation_error": null,
+      "test_name": "bank_sim_onboarding_account_activity_verification___complete_pom.noauth.spec.js",
+      "test_file_path": "pom_tests/bank_sim_onboarding_account_activity_verification___complete_pom.noauth.spec.js",
+      "test_execution_error": [
+        "Test: Bank Sim Onboarding & Account Activity Verification - Complete User Journey",
+        "======================================================================",
+        "Main Error:",
+        "TimeoutError: locator.click: Timeout 30000ms exceeded.",
+        "Call log:",
+        "\u001b[2m  - waiting for getByRole('button', { name: 'VIEW ACCOUNT' }).first()\u001b[22m",
+        "\u001b[2m    - locator resolved to <button color=\"primary\" mat-stroked-button=\"\" _ngcontent-pxk-c148=\"\" class=\"mat-focus-indicator view-account mat-stroked-button mat-button-base mat-primary\">…</button>\u001b[22m",
+        "\u001b[2m  - attempting click action\u001b[22m",
+        "\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m",
+        "\u001b[2m  - element was detached from the DOM, retrying\u001b[22m",
+        "",
+        "",
+        "Detailed Errors:",
+        "",
+        "Error 1:",
+        "TimeoutError: locator.click: Timeout 30000ms exceeded.",
+        "Call log:",
+        "\u001b[2m  - waiting for getByRole('button', { name: 'VIEW ACCOUNT' }).first()\u001b[22m",
+        "\u001b[2m    - locator resolved to <button color=\"primary\" mat-stroked-button=\"\" _ngcontent-pxk-c148=\"\" class=\"mat-focus-indicator view-account mat-stroked-b"
+      ],
+      "test_executed_success": false,
+      "pom_test_name": "bank_sim_onboarding_account_activity_verification___complete_pom.noauth.spec.js",
+      "pom_test_file_path": "pom_tests/bank_sim_onboarding_account_activity_verification___complete_pom.noauth.spec.js",
+      "pom_test_executed_success": false,
+      "pom_test_execution_error": [
+        "Test: Bank Sim Onboarding & Account Activity Verification - Complete User Journey",
+        "======================================================================",
+        "Main Error:",
+        "TimeoutError: locator.click: Timeout 30000ms exceeded.",
+        "Call log:",
+        "\u001b[2m  - waiting for getByRole('button', { name: 'VIEW ACCOUNT' }).first()\u001b[22m",
+        "\u001b[2m    - locator resolved to <button color=\"primary\" mat-stroked-button=\"\" _ngcontent-pxk-c148=\"\" class=\"mat-focus-indicator view-account mat-stroked-button mat-button-base mat-primary\">…</button>\u001b[22m",
+        "\u001b[2m  - attempting click action\u001b[22m",
+        "\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m",
+        "\u001b[2m  - element was detached from the DOM, retrying\u001b[22m",
+        "",
+        "",
+        "Detailed Errors:",
+        "",
+        "Error 1:",
+        "TimeoutError: locator.click: Timeout 30000ms exceeded.",
+        "Call log:",
+        "\u001b[2m  - waiting for getByRole('button', { name: 'VIEW ACCOUNT' }).first()\u001b[22m",
+        "\u001b[2m    - locator resolved to <button color=\"primary\" mat-stroked-button=\"\" _ngcontent-pxk-c148=\"\" class=\"mat-focus-indicator view-account mat-stroked-b"
+      ],
+      "pom_files": [
+        {
+          "url": "",
+          "file_name": "HomePage.js",
+          "file_path": "pom_tests/pom/HomePage.js"
+        },
+        {
+          "url": "",
+          "file_name": "AccountMenuPage.js",
+          "file_path": "pom_tests/pom/AccountMenuPage.js"
+        },
+        {
+          "url": "",
+          "file_name": "WelcomeDialog.js",
+          "file_path": "pom_tests/pom/WelcomeDialog.js"
+        },
+        {
+          "url": "",
+          "file_name": "AccountDetailPage.js",
+          "file_path": "pom_tests/pom/AccountDetailPage.js"
+        }
+      ]
+    }
+  ],
+  "Exploration_Scenarios": [],
+  "Discovered_Workflows": [],
+  "explore_focus_areas": [],
+  "Imported_Test_Coverage": null,
+  "Token_Usage": {
+    "cumulative": {
+      "input_tokens": 921861,
+      "output_tokens": 21911,
+      "cached_input_tokens": 781824,
+      "total_tokens": 943772,
+      "total_cost_usd": 0.846274
+    },
+    "runs": [
+      {
+        "run_type": "generate",
+        "timestamp": "2026-03-24T13:40:50.463663",
+        "provider": "azure_open_ai",
+        "model": "gpt-4.1",
+        "input_tokens": 921861,
+        "output_tokens": 21911,
+        "cached_input_tokens": 781824,
+        "total_tokens": 943772,
+        "cost_usd": 0.846274,
+        "sessions": {
+          "main_execution": {
+            "input": 0,
+            "output": 0,
+            "cost": 0.0
+          },
+          "extraction_agent": {
+            "input": 95857,
+            "output": 2389,
+            "cost": 0.137098
+          },
+          "scenario_llm": {
+            "input": 4457,
+            "output": 2959,
+            "cost": 0.032586
+          },
+          "pom_gen_standalone_analyzer": {
+            "input": 54587,
+            "output": 1932,
+            "cost": 0.049558
+          },
+          "llm_call": {
+            "input": 7498,
+            "output": 1275,
+            "cost": 0.025196
+          },
+          "test_gen_pom_bank_sim_onboarding_account_activity_verification___complete": {
+            "input": 73175,
+            "output": 1389,
+            "cost": 0.055318
+          },
+          "code_repair_bank_sim_onboarding_account_activity_verification___complete_pom.noauth.spec.js": {
+            "input": 686287,
+            "output": 11967,
+            "cost": 0.546518
+          }
+        }
+      }
+    ]
+  }
+}
