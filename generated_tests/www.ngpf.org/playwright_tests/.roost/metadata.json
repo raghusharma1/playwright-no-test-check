@@ -1,0 +1,216 @@
+{
+  "metadata_version": "1.0",
+  "created_at": "2026-03-24T17:57:52.412202",
+  "last_updated": "2026-03-24T18:44:17.512109",
+  "site_url": "https://www.ngpf.org/bank-sim",
+  "pom_files": [
+    {
+      "url": "",
+      "file_name": "AccountPage.js",
+      "file_path": "pom_tests/pom/AccountPage.js"
+    },
+    {
+      "url": "",
+      "file_name": "OnlineShopPage.js",
+      "file_path": "pom_tests/pom/OnlineShopPage.js"
+    },
+    {
+      "url": "",
+      "file_name": "HomePage.js",
+      "file_path": "pom_tests/pom/HomePage.js"
+    },
+    {
+      "url": "",
+      "file_name": "DepositCheckPage.js",
+      "file_path": "pom_tests/pom/DepositCheckPage.js"
+    },
+    {
+      "url": "",
+      "file_name": "TransferDashboardPage.js",
+      "file_path": "pom_tests/pom/TransferDashboardPage.js"
+    },
+    {
+      "url": "",
+      "file_name": "DashboardPage.js",
+      "file_path": "pom_tests/pom/DashboardPage.js"
+    },
+    {
+      "url": "",
+      "file_name": "AccountDetailPage.js",
+      "file_path": "pom_tests/pom/AccountDetailPage.js"
+    }
+  ],
+  "Login_File": {
+    "name": null,
+    "path": null,
+    "hash": null,
+    "agent_workflow_completed": false,
+    "agent_workflow_file_path": null,
+    "agent_interaction_file_path": null,
+    "agent_activity_summary": null,
+    "agent_activity_error": null,
+    "agent_activity_outcome": null,
+    "agent_recommendation": null,
+    "agent_completion_level": null,
+    "agent_steps_completed": null,
+    "execution_flow_file_path": null,
+    "systematic_selectors_file_path": null,
+    "scenario_name": null,
+    "scenario_file_path": null,
+    "test_generated": false,
+    "test_generation_error": null,
+    "test_file_path": null,
+    "test_executed_success": null,
+    "test_execution_error": null,
+    "pom_test_name": null,
+    "pom_test_file_path": null,
+    "pom_test_executed_success": null,
+    "pom_test_execution_error": null,
+    "pom_files": null
+  },
+  "User_Scenarios_File": [],
+  "Exploration_Scenarios": [
+    {
+      "scenario_name": "banking_simulator_-_core_functional_navigations_and_interact",
+      "workflow_id": null,
+      "scenario_file_path": "scenarios/banking_simulator_-_core_functional_navigations_an.json",
+      "feature_file_path": "scenarios/features/Discovered_Workflow_Banking_Simulator_Core_Functio.feature",
+      "feature_file_name": "Discovered_Workflow_Banking_Simulator_Core_Functio.feature",
+      "agent_workflow_file_path": "/var/tmp/Roost/RoostGPT/roost-test/1774355252/temp_info/www.ngpf.org/extracted_data/interaction_data_4ffb67e96cbda2c96fdc012a84f6f097c48098174abc831a8d295d9aea594b35.json",
+      "agent_workflow_completed": true,
+      "scenario_analysis_result_file_path": "/var/tmp/Roost/RoostGPT/roost-test/1774355252/temp_info/www.ngpf.org/extracted_data/user_scenario_4ffb67e96cbda2c96fdc012a84f6f097c48098174abc831a8d295d9aea594b35.json",
+      "agent_activity_summary": null,
+      "test_generated": true,
+      "test_generation_error": null,
+      "test_name": null,
+      "test_file_path": null,
+      "test_executed_success": null,
+      "test_execution_error": null,
+      "pom_test_name": "banking_simulator___core_functional_navigations_and_interact_pom.noauth.spec.js",
+      "pom_test_file_path": "pom_tests/banking_simulator___core_functional_navigations_and_interact_pom.noauth.spec.js",
+      "pom_test_executed_success": false,
+      "pom_test_execution_error": [
+        "Test: Discovered Workflow: Banking Simulator - Core Functional Navigations and Interactions",
+        "======================================================================",
+        "Main Error:",
+        "Error: locator.selectOption: Error: Element is not a <select> element",
+        "Call log:",
+        "\u001b[2m  - waiting for locator('#mat-select-4')\u001b[22m",
+        "\u001b[2m    - locator resolved to <mat-select tabindex=\"0\" role=\"combobox\" id=\"mat-select-4\" aria-haspopup=\"true\" aria-invalid=\"false\" aria-expanded=\"false\" aria-required=\"false\" aria-disabled=\"false\" aria-autocomplete=\"none\" aria-label=\"Items per page:\" class=\"mat-select ng-tns-c100-23 ng-tns-c59-22 ng-star-inserted\">…</mat-select>\u001b[22m",
+        "\u001b[2m  - attempting select option action\u001b[22m",
+        "\u001b[2m    - waiting for element to be visible and enabled\u001b[22m",
+        "",
+        "",
+        "Detailed Errors:",
+        "",
+        "Error 1:",
+        "Error: locator.selectOption: Error: Element is not a <select> element",
+        "Call log:",
+        "\u001b[2m  - waiting for locator('#mat-select-4')\u001b[22m",
+        "\u001b[2m    - locator resolved to <mat-select tabindex=\"0\" role=\"combobox\" id=\"mat-select-4\" aria-"
+      ],
+      "pom_files": [
+        {
+          "url": "",
+          "file_name": "AccountPage.js",
+          "file_path": "pom_tests/pom/AccountPage.js"
+        },
+        {
+          "url": "",
+          "file_name": "OnlineShopPage.js",
+          "file_path": "pom_tests/pom/OnlineShopPage.js"
+        },
+        {
+          "url": "",
+          "file_name": "HomePage.js",
+          "file_path": "pom_tests/pom/HomePage.js"
+        },
+        {
+          "url": "",
+          "file_name": "DepositCheckPage.js",
+          "file_path": "pom_tests/pom/DepositCheckPage.js"
+        },
+        {
+          "url": "",
+          "file_name": "TransferDashboardPage.js",
+          "file_path": "pom_tests/pom/TransferDashboardPage.js"
+        },
+        {
+          "url": "",
+          "file_name": "DashboardPage.js",
+          "file_path": "pom_tests/pom/DashboardPage.js"
+        },
+        {
+          "url": "",
+          "file_name": "AccountDetailPage.js",
+          "file_path": "pom_tests/pom/AccountDetailPage.js"
+        }
+      ],
+      "scenario_summary_file_path": null,
+      "report_pdf_file_path": null,
+      "test_steps": null
+    }
+  ],
+  "Discovered_Workflows": [],
+  "explore_focus_areas": [],
+  "Imported_Test_Coverage": null,
+  "Token_Usage": {
+    "cumulative": {
+      "input_tokens": 2929628,
+      "output_tokens": 78405,
+      "cached_input_tokens": 2382208,
+      "total_tokens": 3008033,
+      "total_cost_usd": 2.913184
+    },
+    "runs": [
+      {
+        "run_type": "generate",
+        "timestamp": "2026-03-24T18:44:17.482886",
+        "provider": "azure_open_ai",
+        "model": "gpt-4.1",
+        "input_tokens": 2929628,
+        "output_tokens": 78405,
+        "cached_input_tokens": 2382208,
+        "total_tokens": 3008033,
+        "cost_usd": 2.913184,
+        "sessions": {
+          "main_execution": {
+            "input": 0,
+            "output": 0,
+            "cost": 0.0
+          },
+          "extraction_agent": {
+            "input": 801153,
+            "output": 24881,
+            "cost": 0.962698
+          },
+          "scenario_llm": {
+            "input": 20764,
+            "output": 8087,
+            "cost": 0.106224
+          },
+          "pom_gen_standalone_analyzer": {
+            "input": 271902,
+            "output": 4673,
+            "cost": 0.234628
+          },
+          "llm_call": {
+            "input": 17690,
+            "output": 1790,
+            "cost": 0.0497
+          },
+          "test_gen_pom_banking_simulator___core_functional_navigations_and_interact": {
+            "input": 170655,
+            "output": 2404,
+            "cost": 0.130334
+          },
+          "code_repair_banking_simulator___core_functional_navigations_and_interact_pom.noauth.spec.js": {
+            "input": 1647464,
+            "output": 36570,
+            "cost": 1.4296
+          }
+        }
+      }
+    ]
+  }
+}
