@@ -1,0 +1,105 @@
+{
+  "login_scenario": "Skipped",
+  "workflow_completed": true,
+  "workflow_result": "PASS",
+  "workflow_error": "",
+  "login_agent_activity_summary": "Not available",
+  "user_scenario_agent_activity_summary": [
+    "The agent systematically executed the user scenario to verify account activity by navigating through the application interface. The agent accessed the homepage, located and clicked the 'Get Started Now' button, acknowledged the welcome dialog, selected the 'Accounts' menu, and proceeded to the 'Account Activity' section. It then selected the 'Saving' account bar, and confirmed the presence of the account with ID '1100001' by interacting with its element. Each interaction was confirmed with successful selector identification and click action. The scenario concluded after all prescribed steps were completed without interruption."
+  ],
+  "generated_files": {
+    "feature_files": [],
+    "json_files": []
+  },
+  "scenarios": {},
+  "token_usage": {
+    "total": {
+      "input": 275972,
+      "output": 10883,
+      "total": 286855,
+      "cost": 0.3433280000000001,
+      "cached_input": 197120
+    },
+    "sessions": {
+      "main_execution": {
+        "type": "root",
+        "input": 0,
+        "output": 0,
+        "total": 0,
+        "cost": 0.0,
+        "cached_input": 0,
+        "call_count": 0,
+        "start_time": 1774335451.6390166,
+        "end_time": 1774335735.5552077,
+        "duration": 283.9161911010742
+      },
+      "extraction_agent": {
+        "type": "auto_created",
+        "input": 97475,
+        "output": 2675,
+        "total": 100150,
+        "cost": 0.142046,
+        "cached_input": 49536,
+        "call_count": 7,
+        "start_time": 1774335479.400953,
+        "end_time": null,
+        "duration": null
+      },
+      "scenario_llm": {
+        "type": "auto_created",
+        "input": 4843,
+        "output": 3109,
+        "total": 7952,
+        "cost": 0.034558,
+        "cached_input": 0,
+        "call_count": 1,
+        "start_time": 1774335580.609697,
+        "end_time": null,
+        "duration": null
+      },
+      "pom_gen_standalone_analyzer": {
+        "type": "test_generation",
+        "input": 90763,
+        "output": 2477,
+        "total": 93240,
+        "cost": 0.07731,
+        "cached_input": 82688,
+        "call_count": 11,
+        "start_time": 1774335580.987663,
+        "end_time": null,
+        "duration": null
+      },
+      "llm_call": {
+        "type": "auto_created",
+        "input": 7852,
+        "output": 1017,
+        "total": 8869,
+        "cost": 0.02384,
+        "cached_input": 0,
+        "call_count": 2,
+        "start_time": 1774335625.3385603,
+        "end_time": null,
+        "duration": null
+      },
+      "test_gen_pom_banking_sim___account_activity_end_to_end": {
+        "type": "test_generation",
+        "input": 75039,
+        "output": 1605,
+        "total": 76644,
+        "cost": 0.065574,
+        "cached_input": 64896,
+        "call_count": 8,
+        "start_time": 1774335632.1308596,
+        "end_time": null,
+        "duration": null
+      }
+    },
+    "provider": "azure_open_ai",
+    "model": "gpt-4.1",
+    "timestamp": "2026-03-24T12:32:15.556395",
+    "cache_statistics": {
+      "total_cached_tokens": 197120,
+      "cache_hit_rate_percent": 71.4
+    }
+  }
+}
