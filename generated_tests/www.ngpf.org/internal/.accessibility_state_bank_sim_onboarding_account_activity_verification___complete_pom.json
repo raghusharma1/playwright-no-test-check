@@ -1,0 +1,215 @@
+{
+  "accessibility_tree": {
+    "role": "WebArea",
+    "name": "Bank Simulator - NGPF",
+    "children": [
+      {
+        "role": "image",
+        "name": ""
+      },
+      {
+        "role": "button",
+        "name": "Open calendar",
+        "haspopup": "dialog"
+      },
+      {
+        "role": "button",
+        "name": "Account",
+        "haspopup": "menu"
+      },
+      {
+        "role": "generic",
+        "name": "",
+        "focused": true
+      },
+      {
+        "role": "heading",
+        "name": "Account Activity",
+        "level": 2
+      },
+      {
+        "role": "text",
+        "name": "View Account/Routing Numbers"
+      },
+      {
+        "role": "heading",
+        "name": "SELECT ACCOUNT",
+        "level": 3
+      },
+      {
+        "role": "button",
+        "name": "Checking"
+      },
+      {
+        "role": "button",
+        "name": "Saving"
+      },
+      {
+        "role": "textbox",
+        "name": "Search"
+      },
+      {
+        "role": "text",
+        "name": "Id"
+      },
+      {
+        "role": "text",
+        "name": "Date"
+      },
+      {
+        "role": "text",
+        "name": "Description"
+      },
+      {
+        "role": "text",
+        "name": "Amount"
+      },
+      {
+        "role": "text",
+        "name": "Balance"
+      },
+      {
+        "role": "text",
+        "name": "Actions"
+      },
+      {
+        "role": "text",
+        "name": "1200004"
+      },
+      {
+        "role": "text",
+        "name": "03/23/2026"
+      },
+      {
+        "role": "text",
+        "name": "Streamwave Videos"
+      },
+      {
+        "role": "text",
+        "name": "-$6.99"
+      },
+      {
+        "role": "text",
+        "name": "$216.04"
+      },
+      {
+        "role": "text",
+        "name": "1200003"
+      },
+      {
+        "role": "text",
+        "name": "03/22/2026"
+      },
+      {
+        "role": "text",
+        "name": "Snack Shack"
+      },
+      {
+        "role": "text",
+        "name": "-$3.99"
+      },
+      {
+        "role": "text",
+        "name": "$223.03"
+      },
+      {
+        "role": "text",
+        "name": "1200002"
+      },
+      {
+        "role": "text",
+        "name": "03/19/2026"
+      },
+      {
+        "role": "text",
+        "name": "Snack Shack"
+      },
+      {
+        "role": "text",
+        "name": "-$3.99"
+      },
+      {
+        "role": "text",
+        "name": "$227.02"
+      },
+      {
+        "role": "text",
+        "name": "1200001"
+      },
+      {
+        "role": "text",
+        "name": "03/19/2026"
+      },
+      {
+        "role": "text",
+        "name": "Cool Clothes Co"
+      },
+      {
+        "role": "text",
+        "name": "-$18.99"
+      },
+      {
+        "role": "text",
+        "name": "$231.01"
+      },
+      {
+        "role": "text",
+        "name": "1200000"
+      },
+      {
+        "role": "text",
+        "name": "03/15/2026"
+      },
+      {
+        "role": "text",
+        "name": "Account Opening"
+      },
+      {
+        "role": "text",
+        "name": "$250.00"
+      },
+      {
+        "role": "text",
+        "name": "$250.00"
+      },
+      {
+        "role": "text",
+        "name": "Items per page:"
+      },
+      {
+        "role": "combobox",
+        "name": "Items per page:",
+        "haspopup": "menu",
+        "value": "10"
+      },
+      {
+        "role": "text",
+        "name": "1 – 5 of 5"
+      },
+      {
+        "role": "button",
+        "name": "First page",
+        "disabled": true
+      },
+      {
+        "role": "button",
+        "name": "Previous page",
+        "disabled": true
+      },
+      {
+        "role": "button",
+        "name": "Next page",
+        "disabled": true
+      },
+      {
+        "role": "button",
+        "name": "Last page",
+        "disabled": true
+      }
+    ]
+  },
+  "url": "https://www.ngpf.org/bank-sim/account",
+  "all_page_urls": [
+    "https://www.ngpf.org/bank-sim/account"
+  ]
+}
