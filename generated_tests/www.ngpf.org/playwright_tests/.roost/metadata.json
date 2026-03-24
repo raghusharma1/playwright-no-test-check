@@ -1,0 +1,174 @@
+{
+  "metadata_version": "1.0",
+  "created_at": "2026-03-24T12:27:31.376147",
+  "last_updated": "2026-03-24T12:32:15.602890",
+  "site_url": "https://www.ngpf.org/bank-sim",
+  "pom_files": [
+    {
+      "url": "",
+      "file_name": "HomePage.js",
+      "file_path": "pom_tests/pom/HomePage.js"
+    },
+    {
+      "url": "",
+      "file_name": "AccountActivity.js",
+      "file_path": "pom_tests/pom/AccountActivity.js"
+    },
+    {
+      "url": "",
+      "file_name": "WelcomeDialog.js",
+      "file_path": "pom_tests/pom/WelcomeDialog.js"
+    },
+    {
+      "url": "",
+      "file_name": "MenuNavigation.js",
+      "file_path": "pom_tests/pom/MenuNavigation.js"
+    }
+  ],
+  "Login_File": {
+    "name": null,
+    "path": null,
+    "hash": null,
+    "agent_workflow_completed": false,
+    "agent_workflow_file_path": null,
+    "agent_interaction_file_path": null,
+    "agent_activity_summary": null,
+    "agent_activity_error": null,
+    "agent_activity_outcome": null,
+    "agent_recommendation": null,
+    "agent_completion_level": null,
+    "agent_steps_completed": null,
+    "execution_flow_file_path": null,
+    "systematic_selectors_file_path": null,
+    "scenario_name": null,
+    "scenario_file_path": null,
+    "test_generated": false,
+    "test_generation_error": null,
+    "test_file_path": null,
+    "test_executed_success": null,
+    "test_execution_error": null,
+    "pom_test_name": null,
+    "pom_test_file_path": null,
+    "pom_test_executed_success": null,
+    "pom_test_execution_error": null,
+    "pom_files": null
+  },
+  "User_Scenarios_File": [
+    {
+      "name": "ngpf_scenario.txt",
+      "path": "/var/tmp/Roost/RoostGPT/roost-test/1774335418/ngpf_scenario.txt",
+      "hash": "3d18a079548ae52429748857d91e1365ab8f00cfd0b45b10a9dc1e9d9fc44eb5",
+      "agent_workflow_completed": true,
+      "agent_workflow_file_path": "/var/tmp/Roost/RoostGPT/roost-test/1774335418/temp_info/www.ngpf.org/extracted_data/interaction_data_a38e8e5e1a5c14e1ed8bfc4c860cde58f5942013dc6ec40f415ce2953561b3af.json",
+      "agent_activity_summary": [
+        "The agent systematically executed the user scenario to verify account activity by navigating through the application interface. The agent accessed the homepage, located and clicked the 'Get Started Now' button, acknowledged the welcome dialog, selected the 'Accounts' menu, and proceeded to the 'Account Activity' section. It then selected the 'Saving' account bar, and confirmed the presence of the account with ID '1100001' by interacting with its element. Each interaction was confirmed with successful selector identification and click action. The scenario concluded after all prescribed steps were completed without interruption."
+      ],
+      "agent_activity_error": [
+        "No errors, blocking issues, or recovery actions were encountered during test execution. All steps proceeded sequentially and as intended."
+      ],
+      "agent_activity_outcome": [
+        "The agent achieved the scenario's final goal by completing all workflow steps outlined in the Original User Scenario, successfully verifying the specified account activity element."
+      ],
+      "agent_recommendation": "No corrective actions are required. For continued test reliability, periodically validate selectors for application updates and ensure all indexed elements remain stable.",
+      "agent_completion_level": "complete",
+      "agent_steps_completed": null,
+      "execution_flow_file_path": "/var/tmp/Roost/RoostGPT/roost-test/1774335418/temp_info/www.ngpf.org/extracted_data/site_analysis_execution_flow_cf725e627f8af1e4ef70f33d35dd8a1faf1451490fc7b8aeacd6b8149fb5d2dd.json",
+      "systematic_selectors_file_path": "/var/tmp/Roost/RoostGPT/roost-test/1774335418/temp_info/www.ngpf.org/extracted_data/selectors/systematic_selectors_cf725e627f8af1e4ef70f33d35dd8a1faf1451490fc7b8aeacd6b8149fb5d2dd.json",
+      "scenario_analysis_result_file_path": "/var/tmp/Roost/RoostGPT/roost-test/1774335418/temp_info/www.ngpf.org/extracted_data/user_scenario_a38e8e5e1a5c14e1ed8bfc4c860cde58f5942013dc6ec40f415ce2953561b3af.json",
+      "scenario_name": "banking_sim_-_account_activity_end-to-end",
+      "scenario_file_path": "scenarios/banking_sim_-_account_activity_end-to-end.json",
+      "feature_file_path": "scenarios/features/Discovered_Workflow_Banking_Sim_Account_Activity_E.feature",
+      "feature_file_name": "Discovered_Workflow_Banking_Sim_Account_Activity_E.feature",
+      "test_generated": true,
+      "test_generation_error": null,
+      "test_name": "banking_sim___account_activity_end_to_end_pom.noauth.spec.js",
+      "test_file_path": "pom_tests/banking_sim___account_activity_end_to_end_pom.noauth.spec.js",
+      "test_execution_error": null,
+      "test_executed_success": true,
+      "pom_test_name": "banking_sim___account_activity_end_to_end_pom.noauth.spec.js",
+      "pom_test_file_path": "pom_tests/banking_sim___account_activity_end_to_end_pom.noauth.spec.js",
+      "pom_test_executed_success": true,
+      "pom_test_execution_error": null,
+      "pom_files": [
+        {
+          "url": "",
+          "file_name": "HomePage.js",
+          "file_path": "pom_tests/pom/HomePage.js"
+        },
+        {
+          "url": "",
+          "file_name": "AccountActivity.js",
+          "file_path": "pom_tests/pom/AccountActivity.js"
+        },
+        {
+          "url": "",
+          "file_name": "WelcomeDialog.js",
+          "file_path": "pom_tests/pom/WelcomeDialog.js"
+        },
+        {
+          "url": "",
+          "file_name": "MenuNavigation.js",
+          "file_path": "pom_tests/pom/MenuNavigation.js"
+        }
+      ]
+    }
+  ],
+  "Exploration_Scenarios": [],
+  "Discovered_Workflows": [],
+  "explore_focus_areas": [],
+  "Imported_Test_Coverage": null,
+  "Token_Usage": {
+    "cumulative": {
+      "input_tokens": 275972,
+      "output_tokens": 10883,
+      "cached_input_tokens": 197120,
+      "total_tokens": 286855,
+      "total_cost_usd": 0.343328
+    },
+    "runs": [
+      {
+        "run_type": "generate",
+        "timestamp": "2026-03-24T12:32:15.556395",
+        "provider": "azure_open_ai",
+        "model": "gpt-4.1",
+        "input_tokens": 275972,
+        "output_tokens": 10883,
+        "cached_input_tokens": 197120,
+        "total_tokens": 286855,
+        "cost_usd": 0.343328,
+        "sessions": {
+          "main_execution": {
+            "input": 0,
+            "output": 0,
+            "cost": 0.0
+          },
+          "extraction_agent": {
+            "input": 97475,
+            "output": 2675,
+            "cost": 0.142046
+          },
+          "scenario_llm": {
+            "input": 4843,
+            "output": 3109,
+            "cost": 0.034558
+          },
+          "pom_gen_standalone_analyzer": {
+            "input": 90763,
+            "output": 2477,
+            "cost": 0.07731
+          },
+          "llm_call": {
+            "input": 7852,
+            "output": 1017,
+            "cost": 0.02384
+          },
+          "test_gen_pom_banking_sim___account_activity_end_to_end": {
+            "input": 75039,
+            "output": 1605,
+            "cost": 0.065574
+          }
+        }
+      }
+    ]
+  }
+}
