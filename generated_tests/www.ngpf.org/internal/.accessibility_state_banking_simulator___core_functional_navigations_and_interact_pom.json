@@ -1,0 +1,184 @@
+{
+  "accessibility_tree": {
+    "role": "WebArea",
+    "name": "Bank Simulator - NGPF",
+    "children": [
+      {
+        "role": "image",
+        "name": ""
+      },
+      {
+        "role": "button",
+        "name": "Open calendar",
+        "haspopup": "dialog"
+      },
+      {
+        "role": "button",
+        "name": "Account",
+        "haspopup": "menu"
+      },
+      {
+        "role": "generic",
+        "name": ""
+      },
+      {
+        "role": "heading",
+        "name": "Upcoming Transfers",
+        "level": 1
+      },
+      {
+        "role": "heading",
+        "name": "SELECT ACCOUNT",
+        "level": 3
+      },
+      {
+        "role": "button",
+        "name": "Checking"
+      },
+      {
+        "role": "button",
+        "name": "Saving"
+      },
+      {
+        "role": "textbox",
+        "name": "Search",
+        "focused": true,
+        "value": "&&&INVALID_SEARCH&&&"
+      },
+      {
+        "role": "text",
+        "name": "Id"
+      },
+      {
+        "role": "text",
+        "name": "Date"
+      },
+      {
+        "role": "text",
+        "name": "Description"
+      },
+      {
+        "role": "text",
+        "name": "Amount"
+      },
+      {
+        "role": "text",
+        "name": "Actions"
+      },
+      {
+        "role": "text",
+        "name": "Items per page:"
+      },
+      {
+        "role": "combobox",
+        "name": "Items per page:",
+        "haspopup": "menu",
+        "value": "10"
+      },
+      {
+        "role": "text",
+        "name": "0 of 0"
+      },
+      {
+        "role": "button",
+        "name": "First page",
+        "disabled": true
+      },
+      {
+        "role": "button",
+        "name": "Previous page",
+        "disabled": true
+      },
+      {
+        "role": "button",
+        "name": "Next page",
+        "disabled": true
+      },
+      {
+        "role": "button",
+        "name": "Last page",
+        "disabled": true
+      },
+      {
+        "role": "heading",
+        "name": "Past Transfers",
+        "level": 1
+      },
+      {
+        "role": "heading",
+        "name": "SELECT ACCOUNT",
+        "level": 3
+      },
+      {
+        "role": "button",
+        "name": "Checking"
+      },
+      {
+        "role": "button",
+        "name": "Saving"
+      },
+      {
+        "role": "textbox",
+        "name": "Search"
+      },
+      {
+        "role": "text",
+        "name": "Id"
+      },
+      {
+        "role": "text",
+        "name": "Date"
+      },
+      {
+        "role": "text",
+        "name": "Description"
+      },
+      {
+        "role": "text",
+        "name": "Amount"
+      },
+      {
+        "role": "text",
+        "name": "Actions"
+      },
+      {
+        "role": "text",
+        "name": "Items per page:"
+      },
+      {
+        "role": "combobox",
+        "name": "Items per page:",
+        "haspopup": "menu",
+        "value": "10"
+      },
+      {
+        "role": "text",
+        "name": "0 of 0"
+      },
+      {
+        "role": "button",
+        "name": "First page",
+        "disabled": true
+      },
+      {
+        "role": "button",
+        "name": "Previous page",
+        "disabled": true
+      },
+      {
+        "role": "button",
+        "name": "Next page",
+        "disabled": true
+      },
+      {
+        "role": "button",
+        "name": "Last page",
+        "disabled": true
+      }
+    ]
+  },
+  "url": "https://www.ngpf.org/bank-sim/transfer/display-transfers",
+  "all_page_urls": [
+    "https://www.ngpf.org/bank-sim/transfer/display-transfers"
+  ]
+}

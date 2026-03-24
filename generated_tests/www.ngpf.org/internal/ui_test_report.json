@@ -1,0 +1,117 @@
+{
+  "login_scenario": "Skipped",
+  "workflow_completed": true,
+  "workflow_result": "PASS",
+  "workflow_error": "",
+  "login_agent_activity_summary": "Not available",
+  "user_scenario_agent_activity_summary": [
+    "Agent navigated through the NGFP banking simulator, systematically exploring major workflows including account management, transfers, bill payments, deposit checks, and shopping. The agent captured stable selectors for actionable elements, initiated workflow interactions, deliberately tested edge-case inputs, and repeatedly attempted recovery upon selector conversion failures. Despite multiple errors in element lookups, especially within complex or hidden form sections, the agent progressed to submit forms, trigger business logic, and capture feedback messages. The scenario concluded with successful execution of the shopping workflow, including multi-item selection and cart submission, followed by protocol-driven feedback capture."
+  ],
+  "generated_files": {
+    "feature_files": [],
+    "json_files": []
+  },
+  "scenarios": {},
+  "token_usage": {
+    "total": {
+      "input": 2929628,
+      "output": 78405,
+      "total": 3008033,
+      "cost": 2.913184000000001,
+      "cached_input": 2382208
+    },
+    "sessions": {
+      "main_execution": {
+        "type": "root",
+        "input": 0,
+        "output": 0,
+        "total": 0,
+        "cost": 0.0,
+        "cached_input": 0,
+        "call_count": 0,
+        "start_time": 1774355272.573294,
+        "end_time": 1774358057.4820561,
+        "duration": 2784.908762216568
+      },
+      "extraction_agent": {
+        "type": "auto_created",
+        "input": 801153,
+        "output": 24881,
+        "total": 826034,
+        "cost": 0.9626980000000002,
+        "cached_input": 559104,
+        "call_count": 49,
+        "start_time": 1774355297.86989,
+        "end_time": null,
+        "duration": null
+      },
+      "scenario_llm": {
+        "type": "auto_created",
+        "input": 20764,
+        "output": 8087,
+        "total": 28851,
+        "cost": 0.10622400000000001,
+        "cached_input": 0,
+        "call_count": 1,
+        "start_time": 1774356226.4803584,
+        "end_time": null,
+        "duration": null
+      },
+      "pom_gen_standalone_analyzer": {
+        "type": "test_generation",
+        "input": 271902,
+        "output": 4673,
+        "total": 276575,
+        "cost": 0.23462799999999998,
+        "cached_input": 231040,
+        "call_count": 13,
+        "start_time": 1774356230.7336388,
+        "end_time": null,
+        "duration": null
+      },
+      "llm_call": {
+        "type": "auto_created",
+        "input": 17690,
+        "output": 1790,
+        "total": 19480,
+        "cost": 0.0497,
+        "cached_input": 0,
+        "call_count": 2,
+        "start_time": 1774356300.1672404,
+        "end_time": null,
+        "duration": null
+      },
+      "test_gen_pom_banking_simulator___core_functional_navigations_and_interact": {
+        "type": "test_generation",
+        "input": 170655,
+        "output": 2404,
+        "total": 173059,
+        "cost": 0.130334,
+        "cached_input": 153472,
+        "call_count": 11,
+        "start_time": 1774356305.4644227,
+        "end_time": null,
+        "duration": null
+      },
+      "code_repair_banking_simulator___core_functional_navigations_and_interact_pom.noauth.spec.js": {
+        "type": "code_repair",
+        "input": 1647464,
+        "output": 36570,
+        "total": 1684034,
+        "cost": 1.4296,
+        "cached_input": 1438592,
+        "call_count": 64,
+        "start_time": 1774356403.802787,
+        "end_time": 1774358032.4670367,
+        "duration": 1628.6642496585846
+      }
+    },
+    "provider": "azure_open_ai",
+    "model": "gpt-4.1",
+    "timestamp": "2026-03-24T18:44:17.482886",
+    "cache_statistics": {
+      "total_cached_tokens": 2382208,
+      "cache_hit_rate_percent": 81.3
+    }
+  }
+}

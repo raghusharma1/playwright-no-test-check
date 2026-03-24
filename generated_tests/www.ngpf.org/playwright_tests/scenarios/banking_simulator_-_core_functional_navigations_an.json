@@ -1,0 +1,928 @@
+{
+  "site_url": "https://www.ngpf.org/bank-sim",
+  "site_type": "unknown",
+  "site_category": "general",
+  "test_name": "banking_simulator_-_core_functional_navigations_and_interact",
+  "login_mechanisms": [
+    "content_browsing",
+    "site_navigation"
+  ],
+  "user_journeys": [
+    {
+      "workflow_type": "navigation_flow",
+      "path": [
+        "bank-sim",
+        "profile_page"
+      ],
+      "success_rate": "discovered_site_navigation",
+      "scenario_priority": "medium",
+      "description": "General website navigation and content discovery"
+    }
+  ],
+  "proposed_scenarios": [
+    {
+      "scenario_name": "Discovered Workflow: Banking Simulator - Core Functional Navigations and Interactions",
+      "description": "Covers onboarding, account search, transfers, and robust shopping cart workflow with value preservation and real selectors.",
+      "workflow_narrative": "A user launches the NGPF BankSim, proceeds through the primary navigation, explores key account and transaction features, uses edge-case searches, attempts a transfer, and ultimately completes a multi-item shopping cart transaction—mirroring the proven agent flow. All steps strictly use the real input values and selectors verified in the agent journey.",
+      "playwright_implementation_guidance": [
+        "Use page.goto with domcontentloaded wait for homepage navigation.",
+        "Always use exact Playwright selectors from the selectors database; pass web_component_parent for elements inside Angular Material or Ionic components.",
+        "Preserve the input values exactly as found in the execution (do not invent).",
+        "Use sequential waits if specified (e.g. after click, wait for message).",
+        "For edge-case input validation, directly input the agent-used invalid strings.",
+        "Where all_selectors includes web_component_parent, use pressSequentially vs fill/input.",
+        "After each major action/form submission, assert on absence or presence of visible validation messages."
+      ],
+      "test_type": "e2e_business_workflow",
+      "priority": "critical",
+      "business_goal": "Verify that a user can flow through the major simulator functions (onboard -> accounts -> transfer -> shopping cart) with correct UI, validation, and server feedback.",
+      "user_story": "As a student, I want to interact with the NGPF banking simulator to search transactions, attempt transfers, and make purchases so that I learn how real-world online banking systems operate.",
+      "detailed_steps": [
+        {
+          "step_number": 1,
+          "action": "Navigate to homepage",
+          "component": "Navigation",
+          "description": "Load homepage",
+          "expected_page_url": "https://www.ngpf.org/bank-sim",
+          "verification_point": "Page loaded",
+          "business_impact": "Site accessibility",
+          "selector": "page.goto('https://www.ngpf.org/bank-sim', { waitUntil: 'domcontentloaded' })",
+          "confidence": 100,
+          "based_on_interaction": true,
+          "all_selectors": [],
+          "page_context": {
+            "suggested_page_class": "HomePage",
+            "page_url_pattern": "/"
+          },
+          "method_context": {
+            "suggested_method_name": "navigateToHomepage",
+            "action_type": "goto"
+          }
+        },
+        {
+          "step_number": 2,
+          "action": "Click GET STARTED NOW",
+          "component": "Landing Page - Get Started Button",
+          "description": "Click 'GET STARTED NOW' button to start session",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/home?returnUrl=%2F",
+          "verification_point": "'GET STARTED NOW' button is actionable and session is initiated",
+          "business_impact": "Enables access to banking features",
+          "selector": "page.getByRole('button', { name: 'GET STARTED NOW' })",
+          "all_selectors": [
+            {
+              "selector": "page.getByRole('button', { name: 'GET STARTED NOW' })",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByRole('button', { name: /GET STARTED NOW/ })",
+              "strategy": "role_name_regex",
+              "confidence": 95,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByText('GET STARTED NOW')",
+              "strategy": "text",
+              "confidence": 88,
+              "is_unique": true
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "mat-card-content",
+            "attributes": {
+              "_ngcontent-qju-c143": "",
+              "class": "mat-card-content"
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "HomePage",
+            "page_url_pattern": "/home"
+          },
+          "method_context": {
+            "suggested_method_name": "clickGetStarted",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 3,
+          "action": "Click to continue onboarding",
+          "component": "Home Main Action",
+          "description": "Click primary onboarding flow button (after 'GET STARTED NOW')",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/home?returnUrl=%2F",
+          "verification_point": "Main banking dashboard loads",
+          "business_impact": "Transitions user to main simulator experience",
+          "selector": "page.click(nextVisibleButtonSelector)",
+          "all_selectors": [],
+          "confidence": 90,
+          "based_on_interaction": true,
+          "page_context": {
+            "suggested_page_class": "HomePage",
+            "page_url_pattern": "/home"
+          },
+          "method_context": {
+            "suggested_method_name": "continueSession",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 4,
+          "action": "Click VIEW ACCOUNT for Checking",
+          "component": "Checking Account Card",
+          "description": "Expand Checking Account details",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/",
+          "verification_point": "Checking Account details are visible",
+          "business_impact": "Access to account history/transactions",
+          "selector": "page.locator('button').filter({ hasText: 'VIEW ACCOUNT' }).first()",
+          "all_selectors": [
+            {
+              "selector": "page.locator('button').filter({ hasText: 'VIEW ACCOUNT' }).first()",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByRole('button', { name: /VIEW ACCOUNT/ })",
+              "strategy": "role_name_regex",
+              "confidence": 95,
+              "is_unique": false
+            },
+            {
+              "selector": "page.locator('button.mat-focus-indicator.view-account')",
+              "strategy": "css_combined_classes",
+              "confidence": 70,
+              "is_unique": false
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "mat-card-content",
+            "attributes": {
+              "_ngcontent-qju-c148": "",
+              "fxlayout": "column",
+              "class": "mat-card-content",
+              "style": "flex-direction: column; box-sizing: border-box; display: flex;"
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "DashboardPage",
+            "page_url_pattern": "/"
+          },
+          "method_context": {
+            "suggested_method_name": "openCheckingAccount",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 5,
+          "action": "Input invalid transaction search",
+          "component": "Transaction Search Input",
+          "description": "Test search input with invalid string",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/account?type=checking",
+          "verification_point": "No matches or validation message appears",
+          "business_impact": "Validates search edge-case handling",
+          "selector": "page.getByPlaceholder('Search').fill('INVALID_SEARCH_#$@!')",
+          "all_selectors": [
+            {
+              "selector": "page.getByPlaceholder('Search')",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('input[data-placeholder=\"Search\"]')",
+              "strategy": "data_attr_placeholder",
+              "confidence": 85,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByPlaceholder('Search')",
+              "strategy": "placeholder",
+              "confidence": 85,
+              "is_unique": true
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "mat-form-field",
+            "attributes": {
+              "_ngcontent-qju-c152": "",
+              "appearance": "outline",
+              "class": "mat-form-field ng-tns-c59-13 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float ng-untouched ng-pristine ng-valid ng-star-inserted"
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "AccountDetailPage",
+            "page_url_pattern": "/account?type=checking"
+          },
+          "method_context": {
+            "suggested_method_name": "inputInvalidTransactionSearch",
+            "action_type": "input"
+          }
+        },
+        {
+          "step_number": 6,
+          "action": "Click Transaction Delete Icon",
+          "component": "Transaction Delete Icon",
+          "description": "Attempt to delete a transaction (tests icon click and error handling)",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/account?type=checking",
+          "verification_point": "No feedback message rendered",
+          "business_impact": "Tests transaction deletion UI path and error handling",
+          "selector": "page.getByText('close')",
+          "all_selectors": [
+            {
+              "selector": "page.getByText('close')",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByRole('img', { name: 'close' })",
+              "strategy": "role_name",
+              "confidence": 95,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByText('close')",
+              "strategy": "text",
+              "confidence": 88,
+              "is_unique": true
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "mat-form-field",
+            "attributes": {
+              "_ngcontent-qju-c152": "",
+              "appearance": "outline",
+              "class": "mat-form-field ng-tns-c59-13 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float ng-valid ng-star-inserted mat-form-field-should-float ng-dirty ng-touched"
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "AccountDetailPage",
+            "page_url_pattern": "/account?type=checking"
+          },
+          "method_context": {
+            "suggested_method_name": "deleteTransaction",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 7,
+          "action": "Click Sidebar TRANSFERS",
+          "component": "Sidebar Navigation - Transfers",
+          "description": "Go to transfer options via sidebar",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/account?type=checking",
+          "verification_point": "Transfers section is visible",
+          "business_impact": "Accesses fund transfer flows",
+          "selector": "page.locator('a').filter({ hasText: 'TRANSFERS expand_more' })",
+          "all_selectors": [
+            {
+              "selector": "page.locator('a').filter({ hasText: 'TRANSFERS expand_more' })",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('a').filter({ hasText: 'TRANSFERS expand_more' })",
+              "strategy": "tag_filter_text",
+              "confidence": 69,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('a.mat-list-item.mat-focus-indicator')",
+              "strategy": "css_combined_classes",
+              "confidence": 62,
+              "is_unique": false
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "app-menu-list-item",
+            "attributes": {
+              "_ngcontent-qju-c146": "",
+              "_nghost-qju-c145": "",
+              "class": "ng-tns-c145-4 ng-star-inserted",
+              "aria-expanded": "false",
+              "style": ""
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "AccountDetailPage",
+            "page_url_pattern": "/account?type=checking"
+          },
+          "method_context": {
+            "suggested_method_name": "navigateToTransfers",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 8,
+          "action": "Click Sidebar DISPLAY ALL TRANSFERS",
+          "component": "Sidebar Transfers - DISPLAY ALL TRANSFERS",
+          "description": "Branch to display all transfers via sidebar link",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/account?type=checking",
+          "verification_point": "Transfer dashboard loads",
+          "business_impact": "Shows all transfer records",
+          "selector": "page.locator('a').filter({ hasText: 'DISPLAY ALL TRANSFERS' })",
+          "all_selectors": [
+            {
+              "selector": "page.locator('a').filter({ hasText: 'DISPLAY ALL TRANSFERS' })",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByText('DISPLAY ALL TRANSFERS')",
+              "strategy": "text",
+              "confidence": 88,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('a').filter({ hasText: /^DISPLAY ALL TRANSFERS$/ })",
+              "strategy": "link_filter_exact",
+              "confidence": 74,
+              "is_unique": true
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "app-menu-list-item",
+            "attributes": {
+              "_ngcontent-qju-c145": "",
+              "_nghost-qju-c145": "",
+              "class": "ng-tns-c145-17 ng-tns-c145-4 ng-star-inserted",
+              "aria-expanded": "false"
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "AccountDetailPage",
+            "page_url_pattern": "/account?type=checking"
+          },
+          "method_context": {
+            "suggested_method_name": "displayAllTransfers",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 9,
+          "action": "Click Checking on Transfer Dashboard",
+          "component": "Transfer Account Selector - Checking",
+          "description": "Filter or select transfers for Checking account",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/transfer/display-transfers",
+          "verification_point": "Checking Transfer table is focused",
+          "business_impact": "Account-based transfer filtering",
+          "selector": "page.locator('button').filter({ hasText: 'Checking' }).first()",
+          "all_selectors": [
+            {
+              "selector": "page.locator('button').filter({ hasText: 'Checking' }).first()",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByRole('button', { name: 'Checking' })",
+              "strategy": "role_name",
+              "confidence": 95,
+              "is_unique": false
+            },
+            {
+              "selector": "page.locator('button, input[type=\"submit\"], input[type=\"button\"]').filter({ hasText: /^Checking$/ })",
+              "strategy": "button_filter_exact",
+              "confidence": 75,
+              "is_unique": false
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "app-choose-account",
+            "attributes": {
+              "_ngcontent-qju-c158": "",
+              "_nghost-qju-c152": ""
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "TransferDashboardPage",
+            "page_url_pattern": "/transfer/display-transfers"
+          },
+          "method_context": {
+            "suggested_method_name": "switchTransferToChecking",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 10,
+          "action": "Input invalid search to Upcoming Transfers",
+          "component": "Upcoming Transfers Search Field",
+          "description": "Edge-case search in transfer dashboard",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/transfer/display-transfers",
+          "verification_point": "No validation message or no results",
+          "business_impact": "Edge-case search validation in transfer module",
+          "selector": "page.locator('#mat-input-2').fill('&&&INVALID_SEARCH&&&')",
+          "all_selectors": [
+            {
+              "selector": "page.locator('#mat-input-2')",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('input[data-placeholder=\"Search\"]')",
+              "strategy": "data_attr_placeholder",
+              "confidence": 85,
+              "is_unique": false
+            },
+            {
+              "selector": "page.getByPlaceholder('Search')",
+              "strategy": "placeholder",
+              "confidence": 85,
+              "is_unique": false
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "mat-form-field",
+            "attributes": {
+              "_ngcontent-qju-c152": "",
+              "appearance": "outline",
+              "class": "mat-form-field ng-tns-c59-18 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float ng-untouched ng-pristine ng-valid ng-star-inserted"
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "TransferDashboardPage",
+            "page_url_pattern": "/transfer/display-transfers"
+          },
+          "method_context": {
+            "suggested_method_name": "inputInvalidTransferSearch",
+            "action_type": "input"
+          }
+        },
+        {
+          "step_number": 11,
+          "action": "Switch to Saving Account in Transfer Dashboard",
+          "component": "Transfer Dashboard Account Select",
+          "description": "Switch transfer table to savings account context",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/transfer/display-transfers",
+          "verification_point": "Saving table is focused",
+          "business_impact": "Verifies transfer filtering for additional accounts",
+          "selector": "page.locator('button').filter({ hasText: 'Saving' }).first()",
+          "all_selectors": [
+            {
+              "selector": "page.locator('button').filter({ hasText: 'Saving' }).first()",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByRole('button', { name: 'Saving' })",
+              "strategy": "role_name",
+              "confidence": 95,
+              "is_unique": false
+            },
+            {
+              "selector": "page.locator('button, input[type=\"submit\"], input[type=\"button\"]').filter({ hasText: /^Saving$/ })",
+              "strategy": "button_filter_exact",
+              "confidence": 75,
+              "is_unique": false
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "app-choose-account",
+            "attributes": {
+              "_ngcontent-qju-c158": "",
+              "_nghost-qju-c152": ""
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "TransferDashboardPage",
+            "page_url_pattern": "/transfer/display-transfers"
+          },
+          "method_context": {
+            "suggested_method_name": "switchTransferToSaving",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 12,
+          "action": "Click Transfer/Saving Submission",
+          "component": "Transfer Form Submit (Saving)",
+          "description": "Test edge-case Save click on Saving transfers form",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/transfer/display-transfers",
+          "verification_point": "No error/validation appears",
+          "business_impact": "Edge submission check",
+          "selector": "page.locator('form').filter({ hasText: 'close' })",
+          "all_selectors": [
+            {
+              "selector": "page.locator('form').filter({ hasText: 'close' })",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByText('close')",
+              "strategy": "text",
+              "confidence": 88,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('form.search-form.ng-valid')",
+              "strategy": "css_combined_classes",
+              "confidence": 80,
+              "is_unique": false
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "app-choose-account",
+            "attributes": {
+              "_ngcontent-qju-c158": "",
+              "_nghost-qju-c152": ""
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "TransferDashboardPage",
+            "page_url_pattern": "/transfer/display-transfers"
+          },
+          "method_context": {
+            "suggested_method_name": "submitSavingsTransfer",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 13,
+          "action": "Change past transfers table pagination",
+          "component": "Past Transfers Items Per Page Dropdown",
+          "description": "Change items-per-page for past transfers table to test pagination boundary",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/transfer/display-transfers",
+          "verification_point": "Pagination UI updates accordingly",
+          "business_impact": "Verifies table pagination controls",
+          "selector": "page.locator('#mat-select-4').selectOption('10')",
+          "all_selectors": [
+            {
+              "selector": "page.locator('#mat-select-4')",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByRole('combobox', { name: /Items per page:/ })",
+              "strategy": "aria_label_regex",
+              "confidence": 96,
+              "is_unique": false
+            },
+            {
+              "selector": "page.getByRole('combobox', { name: /Items per page:/ })",
+              "strategy": "role_name_regex",
+              "confidence": 95,
+              "is_unique": false
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "mat-form-field",
+            "attributes": {
+              "class": "mat-form-field mat-paginator-page-size-select ng-tns-c59-22 mat-primary mat-form-field-type-mat-select mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-hide-placeholder ng-star-inserted mat-form-field-should-float"
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "TransferDashboardPage",
+            "page_url_pattern": "/transfer/display-transfers"
+          },
+          "method_context": {
+            "suggested_method_name": "selectPastTransfersItemsPerPage",
+            "action_type": "select_option"
+          }
+        },
+        {
+          "step_number": 14,
+          "action": "Change items per page to 20",
+          "component": "Items Per Page Dropdown",
+          "description": "Switch items per page again to another boundary value",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/transfer/display-transfers",
+          "verification_point": "Table view updates",
+          "business_impact": "Pagination robustness",
+          "selector": "page.getByRole('option', { name: '15' })",
+          "all_selectors": [
+            {
+              "selector": "page.getByRole('option', { name: '15' })",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('[role=\"listbox\"]').getByRole('option', { name: '15' })",
+              "strategy": "portal_role_name",
+              "confidence": 98,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('[role=\"listbox\"]').getByRole('option', { name: '15' })",
+              "strategy": "portal_role_child_role",
+              "confidence": 98,
+              "is_unique": true
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "page_context": {
+            "suggested_page_class": "TransferDashboardPage",
+            "page_url_pattern": "/transfer/display-transfers"
+          },
+          "method_context": {
+            "suggested_method_name": "selectPastTransfersItemsPerPageSecond",
+            "action_type": "select_option"
+          }
+        },
+        {
+          "step_number": 15,
+          "action": "Navigate to Shopping via sidebar",
+          "component": "Sidebar Navigation - SHOPPING",
+          "description": "Branch into Shopping flow via sidebar",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/deposit-check",
+          "verification_point": "Shopping page loads",
+          "business_impact": "Access to simulator shopping workflow",
+          "selector": "page.locator('a').filter({ hasText: 'SHOPPING' })",
+          "all_selectors": [
+            {
+              "selector": "page.locator('a').filter({ hasText: 'SHOPPING' })",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByText('SHOPPING')",
+              "strategy": "text",
+              "confidence": 88,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('a').filter({ hasText: /^SHOPPING$/ })",
+              "strategy": "link_filter_exact",
+              "confidence": 74,
+              "is_unique": true
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "app-menu-list-item",
+            "attributes": {
+              "_ngcontent-qju-c146": "",
+              "_nghost-qju-c145": "",
+              "class": "ng-tns-c145-9 ng-star-inserted",
+              "aria-expanded": "false",
+              "style": ""
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "DepositCheckPage",
+            "page_url_pattern": "/deposit-check"
+          },
+          "method_context": {
+            "suggested_method_name": "navigateToShopping",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 16,
+          "action": "Select Shopping Cart Items (Sidebar Shop)",
+          "component": "Shopping Cart - Smoothie Boost",
+          "description": "Select Smoothie Boost item by checking its box",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/online-shop",
+          "verification_point": "Checkbox is checked",
+          "business_impact": "Simulate item selection",
+          "selector": "page.locator('#mat-checkbox-21')",
+          "all_selectors": [
+            {
+              "selector": "page.locator('#mat-checkbox-21')",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByText('Smoothie Boost')",
+              "strategy": "text",
+              "confidence": 88,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('#mat-checkbox-21')",
+              "strategy": "id",
+              "confidence": 75,
+              "is_unique": true
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "page_context": {
+            "suggested_page_class": "OnlineShopPage",
+            "page_url_pattern": "/online-shop"
+          },
+          "method_context": {
+            "suggested_method_name": "selectSmoothieBoost",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 17,
+          "action": "Select Shopping Cart Items (continued)",
+          "component": "Shopping Cart - Sit & Eat",
+          "description": "Select Sit & Eat item",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/online-shop",
+          "verification_point": "Checkbox is checked",
+          "business_impact": "Cart selection",
+          "selector": "page.locator('#mat-checkbox-22')",
+          "all_selectors": [
+            {
+              "selector": "page.locator('#mat-checkbox-22')",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByText('Sit & Eat')",
+              "strategy": "text",
+              "confidence": 88,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('#mat-checkbox-22')",
+              "strategy": "id",
+              "confidence": 75,
+              "is_unique": true
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "page_context": {
+            "suggested_page_class": "OnlineShopPage",
+            "page_url_pattern": "/online-shop"
+          },
+          "method_context": {
+            "suggested_method_name": "selectSitAndEat",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 18,
+          "action": "Select Another Shopping Cart Item",
+          "component": "Shopping Cart Checkbox - Glam Beauty",
+          "description": "Toggle Glam Beauty checkbox",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/online-shop",
+          "verification_point": "Checkbox is checked",
+          "business_impact": "Multi-item scenario",
+          "selector": "page.locator('#mat-checkbox-24')",
+          "all_selectors": [
+            {
+              "selector": "page.locator('#mat-checkbox-24')",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByText('Glam Beauty')",
+              "strategy": "text",
+              "confidence": 88,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('#mat-checkbox-24')",
+              "strategy": "id",
+              "confidence": 75,
+              "is_unique": true
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "page_context": {
+            "suggested_page_class": "OnlineShopPage",
+            "page_url_pattern": "/online-shop"
+          },
+          "method_context": {
+            "suggested_method_name": "selectGlamBeauty",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 19,
+          "action": "Click Shopping Save",
+          "component": "Shopping Modal",
+          "description": "Submit the selected shopping cart items",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/online-shop",
+          "verification_point": "Selection submitted and visible message triggered",
+          "business_impact": "Completing shopping/cash out flow",
+          "selector": "page.locator('button').filter({ hasText: 'Save' })",
+          "all_selectors": [
+            {
+              "selector": "page.locator('button').filter({ hasText: 'Save' })",
+              "strategy": "roost_primary",
+              "confidence": 99,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByRole('button', { name: 'Save' })",
+              "strategy": "role_name",
+              "confidence": 95,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByText('Save')",
+              "strategy": "text",
+              "confidence": 88,
+              "is_unique": true
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "app-money-quiz",
+            "attributes": {
+              "_ngcontent-qju-c162": "",
+              "_nghost-qju-c161": ""
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "OnlineShopPage",
+            "page_url_pattern": "/online-shop"
+          },
+          "method_context": {
+            "suggested_method_name": "submitShoppingCart",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 20,
+          "action": "Verify Submission Success",
+          "component": "UI Feedback",
+          "description": "Capture message after Shopping submit (e.g. 'Transactions added successfully')",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/account",
+          "verification_point": "Success or error message displays appropriately",
+          "business_impact": "Confirms transaction and user feedback flow",
+          "selector": "page.waitForSelector('snackbar or visible notification')",
+          "all_selectors": [],
+          "confidence": 97,
+          "based_on_interaction": true,
+          "page_context": {
+            "suggested_page_class": "AccountPage",
+            "page_url_pattern": "/account"
+          },
+          "method_context": {
+            "suggested_method_name": "verifyShoppingSuccess",
+            "action_type": "capture_visible_messages"
+          }
+        }
+      ],
+      "expected_results": [
+        "User is able to navigate from the homepage to the main dashboard, interact with primary banking modules (search, delete, transfers, shopping), and receives success feedback upon shopping cart submission.",
+        "No workflow errors, and all required business logic triggers and edge-cases (invalid/empty search, pagination, and multi-item selection) are validated."
+      ],
+      "edge_cases_to_test": [
+        "Entering invalid or empty values into forms (search, shopping quantity, etc.)",
+        "Rapid navigation or slow network to assure no race conditions or missed UI updates",
+        "Repeated clicking on navigation and module features",
+        "Boundary checks for table pagination"
+      ],
+      "data_requirements": [
+        "Default user/simulator session (no login required)",
+        "Use only the exact values as in execution (e.g. INVALID_SEARCH_#$@!, &&&INVALID_SEARCH&&&)"
+      ],
+      "prerequisites": [
+        "Site must be accessible at https://www.ngpf.org/bank-sim",
+        "Agent/simulator state must be fresh or resettable for repeatability"
+      ],
+      "auth_required": false,
+      "starting_url": null
+    }
+  ],
+  "login_completion_state": "successful",
+  "analysis_timestamp": "2026-03-24T18:13:50.630165",
+  "confidence_score": 0.5,
+  "auth_required": false,
+  "starting_url": null
+}
