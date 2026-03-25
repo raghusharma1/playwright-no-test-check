@@ -1,0 +1,309 @@
+{
+  "site_type": "saas",
+  "site_category": "Bank simulator for financial education and learning",
+  "confidence_score": 0.95,
+  "user_journeys": [
+    {
+      "journey_name": "Primary Business Workflow",
+      "description": "Main user flow",
+      "business_value": "Enables users to simulate banking operations for educational purposes",
+      "user_persona": "Student or educator exploring banking scenarios",
+      "frequency": "daily",
+      "complexity": "low"
+    }
+  ],
+  "proposed_scenarios": [
+    {
+      "scenario_name": "Discovered Workflow: e2e_business_workflow - Complete User Journey",
+      "description": "Comprehensive test covering the user journey of accessing the savings account activity in the NGPF Bank Simulator.",
+      "workflow_narrative": "A user navigates to the NGPF Bank Simulator, initiates the banking scenario, closes the welcome dialog, expands the accounts sidebar, selects 'Account Activity', views the savings account, and displays its activity. This sequence validates end-to-end access to account details, confirming workflow completion as observed.",
+      "playwright_implementation_guidance": [
+        "Use waitForSelector for dialogs and menu transitions.",
+        "Use pressSequentially for steps inside web components (copy the web_component_parent field where present).",
+        "Validate each page change with URL assertions as observed.",
+        "All selectors are mapped from captured database; use alternatives when primaries are unstable."
+      ],
+      "test_type": "e2e_business_workflow",
+      "priority": "high",
+      "business_goal": "Verify users can complete the workflow of accessing account activity in the simulator.",
+      "user_story": "As a student, I want to navigate through the Bank Simulator to view my savings account activity so that I can learn about banking transactions.",
+      "detailed_steps": [
+        {
+          "step_number": 1,
+          "action": "Navigate to homepage",
+          "component": "Navigation",
+          "description": "Load homepage",
+          "expected_page_url": "https://www.ngpf.org/bank-sim",
+          "verification_point": "Page loaded",
+          "business_impact": "Site accessibility",
+          "selector": "page.goto('https://www.ngpf.org/bank-sim', { waitUntil: 'domcontentloaded' })",
+          "confidence": 100,
+          "based_on_interaction": true,
+          "all_selectors": []
+        },
+        {
+          "step_number": 2,
+          "action": "Click",
+          "component": "Start Scenario",
+          "description": "Click 'GET STARTED NOW' to begin bank sim scenario",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/home?returnUrl=%2F",
+          "verification_point": "Scenario initiated",
+          "business_impact": "Workflow progress",
+          "selector": "page.getByRole('button', { name: 'GET STARTED NOW' })",
+          "all_selectors": [
+            {
+              "selector": "page.getByRole('button', { name: /GET STARTED NOW/ })",
+              "strategy": "role_name_regex",
+              "confidence": 95,
+              "is_unique": true
+            },
+            {
+              "selector": "page.getByText('GET STARTED NOW')",
+              "strategy": "text",
+              "confidence": 88,
+              "is_unique": true
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "mat-card-content",
+            "attributes": {
+              "_ngcontent-yln-c143": "",
+              "class": "mat-card-content"
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "HomePage",
+            "page_url_pattern": "/bank-sim"
+          },
+          "method_context": {
+            "suggested_method_name": "startScenario",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 3,
+          "action": "Click",
+          "component": "Welcome Dialog",
+          "description": "Click 'Ok' to dismiss welcome dialog",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/home?returnUrl=%2F",
+          "verification_point": "Welcome dialog closed",
+          "business_impact": "Workflow progress",
+          "selector": "page.getByRole('button', { name: 'Ok' })",
+          "all_selectors": [
+            {
+              "selector": "page.locator('[role=\"dialog\"]').getByRole('button', { name: 'Ok' })",
+              "strategy": "portal_role_name",
+              "confidence": 95,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('[role=\"dialog\"]').getByRole('button', { name: 'Ok' })",
+              "strategy": "parent_role_child_role",
+              "confidence": 88,
+              "is_unique": true
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "app-welcome-dialog",
+            "attributes": {
+              "_nghost-yln-c147": "",
+              "class": "ng-star-inserted",
+              "style": ""
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "WelcomeDialogPage",
+            "page_url_pattern": "/bank-sim/home?returnUrl=%2F"
+          },
+          "method_context": {
+            "suggested_method_name": "acceptWelcomeDialog",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 4,
+          "action": "Click",
+          "component": "Sidebar Menu",
+          "description": "Expand 'ACCOUNTS' section in sidebar",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/home?returnUrl=%2F",
+          "verification_point": "Accounts section expanded",
+          "business_impact": "Access to account features",
+          "selector": "page.locator('a').filter({ hasText: 'ACCOUNTS expand_more' })",
+          "all_selectors": [
+            {
+              "selector": "page.locator('a.mat-list-item.mat-focus-indicator')",
+              "strategy": "css_combined_classes",
+              "confidence": 62,
+              "is_unique": false
+            },
+            {
+              "selector": "page.locator('a.mat-list-item')",
+              "strategy": "css_stable_class",
+              "confidence": 60,
+              "is_unique": false
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "app-menu-list-item",
+            "attributes": {
+              "_ngcontent-yln-c146": "",
+              "_nghost-yln-c145": "",
+              "class": "ng-tns-c145-3 ng-star-inserted",
+              "aria-expanded": "false",
+              "style": ""
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "SidebarMenuPage",
+            "page_url_pattern": "/bank-sim/home?returnUrl=%2F"
+          },
+          "method_context": {
+            "suggested_method_name": "expandAccountsSection",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 5,
+          "action": "Click",
+          "component": "Sidebar Menu",
+          "description": "Select 'ACCOUNT ACTIVITY' from sidebar",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/home?returnUrl=%2F",
+          "verification_point": "Account activity page loaded",
+          "business_impact": "Workflow progress",
+          "selector": "page.locator('a').filter({ hasText: 'ACCOUNT ACTIVITY' })",
+          "all_selectors": [
+            {
+              "selector": "page.locator('a').filter({ hasText: /^ACCOUNT ACTIVITY$/ })",
+              "strategy": "link_filter_exact",
+              "confidence": 74,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('xpath=html/body/app-root/app-main/mat-drawer-container/mat-drawer/div/mat-nav-list/app-menu-list-item[3]/div/app-menu-list-item[1]/a')",
+              "strategy": "xpath",
+              "confidence": 50,
+              "is_unique": true
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "app-menu-list-item",
+            "attributes": {
+              "_ngcontent-yln-c145": "",
+              "_nghost-yln-c145": "",
+              "class": "ng-tns-c145-13 ng-tns-c145-3 ng-star-inserted",
+              "aria-expanded": "false"
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "AccountActivityPage",
+            "page_url_pattern": "/bank-sim/account"
+          },
+          "method_context": {
+            "suggested_method_name": "openAccountActivity",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 6,
+          "action": "Click",
+          "component": "Account List",
+          "description": "Click 'VIEW ACCOUNT' in Savings account section",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/account",
+          "verification_point": "Navigated to savings account details",
+          "business_impact": "Workflow progress",
+          "selector": "page.getByText('VIEW ACCOUNT')",
+          "all_selectors": [],
+          "confidence": 88,
+          "based_on_interaction": true,
+          "page_context": {
+            "suggested_page_class": "AccountListPage",
+            "page_url_pattern": "/bank-sim/account"
+          },
+          "method_context": {
+            "suggested_method_name": "viewSavingsAccount",
+            "action_type": "click"
+          }
+        },
+        {
+          "step_number": 7,
+          "action": "Click",
+          "component": "Savings Account Details",
+          "description": "Click 'Saving' to display account activity",
+          "expected_page_url": "https://www.ngpf.org/bank-sim/account",
+          "verification_point": "Savings account details displayed",
+          "business_impact": "Final workflow confirmation",
+          "selector": "page.getByRole('button', { name: 'Saving' })",
+          "all_selectors": [
+            {
+              "selector": "page.getByText('Saving')",
+              "strategy": "text",
+              "confidence": 88,
+              "is_unique": true
+            },
+            {
+              "selector": "page.locator('button.mat-focus-indicator.mat-button')",
+              "strategy": "css_combined_classes",
+              "confidence": 80,
+              "is_unique": false
+            }
+          ],
+          "confidence": 99,
+          "based_on_interaction": true,
+          "web_component_parent": {
+            "tagName": "app-choose-account",
+            "attributes": {
+              "_ngcontent-yln-c156": "",
+              "_nghost-yln-c152": ""
+            },
+            "hasShadowRoot": false
+          },
+          "page_context": {
+            "suggested_page_class": "SavingsAccountPage",
+            "page_url_pattern": "/bank-sim/account"
+          },
+          "method_context": {
+            "suggested_method_name": "showSavingsAccountActivity",
+            "action_type": "click"
+          }
+        }
+      ],
+      "expected_results": [
+        "User completes workflow",
+        "No errors"
+      ],
+      "edge_cases_to_test": [
+        "Slow network",
+        "Interruptions"
+      ],
+      "data_requirements": [
+        "Test accounts",
+        "Valid inputs"
+      ],
+      "prerequisites": [
+        "Site accessible"
+      ]
+    }
+  ],
+  "site_url": "https://www.ngpf.org/bank-sim",
+  "test_name": "e2e_business_workflow_-_complete_user_journey_01_1774424865",
+  "login_mechanisms": [
+    "general_interaction"
+  ],
+  "login_completion_state": "successful",
+  "analysis_timestamp": "2026-03-25T13:17:45.132377",
+  "auth_required": false,
+  "starting_url": null,
+  "workflow_id": "WF001"
+}
