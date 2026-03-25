@@ -1,0 +1,229 @@
+{
+  "metadata_version": "1.0",
+  "created_at": "2026-03-25T13:15:43.236234",
+  "last_updated": "2026-03-25T13:27:38.506085",
+  "output_dir": "RoostGPT\\roost-test\\1774424715\\source\\playwright-no-test-check\\generated_tests\\www.ngpf.org\\playwright_tests",
+  "site_url": "https://www.ngpf.org/bank-sim",
+  "pom_files": [
+    {
+      "url": "",
+      "file_name": "HomePage.js",
+      "file_path": "pom_tests\\pom\\HomePage.js"
+    },
+    {
+      "url": "",
+      "file_name": "WelcomeDialogPage.js",
+      "file_path": "pom_tests\\pom\\WelcomeDialogPage.js"
+    },
+    {
+      "url": "",
+      "file_name": "SidebarMenuPage.js",
+      "file_path": "pom_tests\\pom\\SidebarMenuPage.js"
+    },
+    {
+      "url": "",
+      "file_name": "AccountActivityPage.js",
+      "file_path": "pom_tests\\pom\\AccountActivityPage.js"
+    },
+    {
+      "url": "",
+      "file_name": "SavingsAccountPage.js",
+      "file_path": "pom_tests\\pom\\SavingsAccountPage.js"
+    }
+  ],
+  "Login_File": {
+    "name": null,
+    "path": null,
+    "hash": null,
+    "agent_workflow_completed": false,
+    "agent_workflow_file_path": null,
+    "agent_interaction_file_path": null,
+    "agent_activity_summary": null,
+    "agent_activity_error": null,
+    "agent_activity_outcome": null,
+    "agent_recommendation": null,
+    "agent_completion_level": null,
+    "agent_steps_completed": null,
+    "execution_flow_file_path": null,
+    "systematic_selectors_file_path": null,
+    "scenario_name": null,
+    "scenario_file_path": null,
+    "test_generated": false,
+    "test_generation_error": null,
+    "test_file_path": null,
+    "test_executed_success": null,
+    "test_execution_error": null,
+    "pom_test_name": null,
+    "pom_test_file_path": null,
+    "pom_test_executed_success": null,
+    "pom_test_execution_error": null,
+    "pom_files": null
+  },
+  "Workflows": [
+    {
+      "workflow_id": "WF001",
+      "title": "Primary Business Workflow",
+      "goal": "Verify users can complete the workflow of accessing account activity in the simulator.",
+      "feature_area": "Bank simulator for financial education and learning",
+      "priority": "high",
+      "starting_hint": "Click on \"Get Started Now\" and then complete this scenario.\nAccept the \"Welcome dialog\", press ok and then look for \"Accounts\" and expand it by clicking\n\n1. Click \"Account Activity\"\n2. Click \"Saving\" bar.\n6. Verify ID \"1100001\" is present",
+      "discovery_source": "user_scenario",
+      "source_file": "C:\\Users\\ZB\\Downloads\\ngpf_scenario.txt",
+      "source_file_hash": "3d18a079548ae52429748857d91e1365ab8f00cfd0b45b10a9dc1e9d9fc44eb5",
+      "worker_completed": true,
+      "worker_result": "success",
+      "linked_scenario_name": "e2e_business_workflow_-_complete_user_journey_01_1774424865",
+      "error": null,
+      "scenario_name": "e2e_business_workflow_-_complete_user_journey_01_1774424865",
+      "scenario_file_path": "scenarios\\WF001_ngpf_scenario.json",
+      "scenario_summary_file_path": "scenarios\\summaries\\WF001_ngpf_scenario.md",
+      "report_pdf_file_path": "scenarios\\reports\\WF001_ngpf_scenario.pdf",
+      "feature_file_path": null,
+      "feature_file_name": null,
+      "agent_workflow_file_path": "C:\\var\\tmp\\Roost\\RoostGPT\\roost-test\\1774424715\\temp_info\\www.ngpf.org\\extracted_data\\execution_flow_WF001_ngpf_scenario.json",
+      "agent_workflow_completed": true,
+      "scenario_analysis_result_file_path": null,
+      "agent_activity_summary": [
+        "The agent successfully executed the Ngpf scenario as defined in the original user goal. The agent navigated to the NGPF bank simulator site, clicked the 'Get Started Now' button to initiate the workflow, handled the Welcome dialog by accepting it, expanded the 'Accounts' section, accessed 'Account Activity', viewed the savings account activity, and clicked 'Saving' to verify access. All major actions required by the scenario were executed in sequence and without incident, leading to the intended workflow outcome."
+      ],
+      "agent_activity_error": [
+        "No blocking issues or critical errors were encountered during execution. All selectors for interactive elements were identified with high confidence, and each step was performed as intended. There was no need for recovery measures as each step succeeded without apparent missteps."
+      ],
+      "agent_activity_outcome": [
+        "The agent fully achieved the scenario's final goal. The workflow steps outlined in the original user scenario were satisfied, including navigation, required clicks, dialog acceptance, and observation of the account activity. The agent concluded the task successfully at the validation stage for savings account details."
+      ],
+      "agent_recommendation": "Maintain current automation logic as the workflow executes reliably. For improved efficiency, consider consolidating sequential element interactions when stable selectors are consistently found. Continue to monitor for UI changes that may affect selector stability.",
+      "agent_completion_level": "complete",
+      "agent_steps_completed": 8,
+      "visited_urls": [
+        "https://www.ngpf.org/bank-sim/account",
+        "https://www.ngpf.org/bank-sim/",
+        "https://www.ngpf.org/bank-sim/home?returnUrl=%2F",
+        "https://www.ngpf.org/bank-sim"
+      ],
+      "execution_flow_file_path": null,
+      "test_generated": true,
+      "test_generation_error": null,
+      "test_name": "e2e_business_workflow_-_complete_user_journey_01_1774424865",
+      "test_file_path": "pom_tests\\e2e_business_workflow___complete_user_journey_01_1774424865_pom.noauth.spec.js",
+      "test_executed_success": true,
+      "test_execution_error": null,
+      "pom_test_name": "e2e_business_workflow___complete_user_journey_01_1774424865_pom.noauth.spec.js",
+      "pom_test_file_path": "pom_tests\\e2e_business_workflow___complete_user_journey_01_1774424865_pom.noauth.spec.js",
+      "pom_test_executed_success": true,
+      "pom_test_execution_error": null,
+      "pom_files": [
+        {
+          "url": "",
+          "file_name": "HomePage.js",
+          "file_path": "pom_tests\\pom\\HomePage.js"
+        },
+        {
+          "url": "",
+          "file_name": "WelcomeDialogPage.js",
+          "file_path": "pom_tests\\pom\\WelcomeDialogPage.js"
+        },
+        {
+          "url": "",
+          "file_name": "SidebarMenuPage.js",
+          "file_path": "pom_tests\\pom\\SidebarMenuPage.js"
+        },
+        {
+          "url": "",
+          "file_name": "AccountActivityPage.js",
+          "file_path": "pom_tests\\pom\\AccountActivityPage.js"
+        },
+        {
+          "url": "",
+          "file_name": "SavingsAccountPage.js",
+          "file_path": "pom_tests\\pom\\SavingsAccountPage.js"
+        }
+      ],
+      "test_steps": [
+        "Load homepage",
+        "Click 'GET STARTED NOW' to begin bank sim scenario",
+        "Click 'Ok' to dismiss welcome dialog",
+        "Expand 'ACCOUNTS' section in sidebar",
+        "Select 'ACCOUNT ACTIVITY' from sidebar",
+        "Click 'VIEW ACCOUNT' in Savings account section",
+        "Click 'Saving' to display account activity"
+      ]
+    }
+  ],
+  "explore_focus_areas": [],
+  "Imported_Test_Coverage": null,
+  "Token_Usage": {
+    "cumulative": {
+      "input_tokens": 776951,
+      "output_tokens": 31480,
+      "cached_input_tokens": 629376,
+      "total_tokens": 808431,
+      "total_cost_usd": 0.861678
+    },
+    "runs": [
+      {
+        "run_type": "generate",
+        "timestamp": "2026-03-25T13:27:38.491652",
+        "provider": "azure_open_ai",
+        "model": "gpt-4.1",
+        "input_tokens": 776951,
+        "output_tokens": 31480,
+        "cached_input_tokens": 629376,
+        "total_tokens": 808431,
+        "cost_usd": 0.861678,
+        "sessions": {
+          "main_execution": {
+            "input": 0,
+            "output": 0,
+            "cost": 0.0
+          },
+          "worker_supervisor_WF001": {
+            "input": 2576,
+            "output": 170,
+            "cost": 0.006512
+          },
+          "explore_worker_WF001_a1": {
+            "input": 84855,
+            "output": 2320,
+            "cost": 0.105518
+          },
+          "explore_synthesize_single_workflow": {
+            "input": 3131,
+            "output": 2609,
+            "cost": 0.027134
+          },
+          "report_curation_WF001": {
+            "input": 8623,
+            "output": 393,
+            "cost": 0.02039
+          },
+          "post_explore_testgen": {
+            "input": 0,
+            "output": 0,
+            "cost": 0.0
+          },
+          "pom_gen_e2e_business_workflow_-_complete_user_journey_01_1774424865": {
+            "input": 53859,
+            "output": 1786,
+            "cost": 0.04655
+          },
+          "test_gen_pom_e2e_business_workflow___complete_user_journey_01_1774424865": {
+            "input": 81646,
+            "output": 2173,
+            "cost": 0.07258
+          },
+          "code_repair_e2e_business_workflow___complete_user_journey_01_1774424865_pom.noauth.spec.js": {
+            "input": 538150,
+            "output": 21227,
+            "cost": 0.568356
+          },
+          "a11y_tree_filter": {
+            "input": 4111,
+            "output": 802,
+            "cost": 0.014638
+          }
+        }
+      }
+    ]
+  }
+}
