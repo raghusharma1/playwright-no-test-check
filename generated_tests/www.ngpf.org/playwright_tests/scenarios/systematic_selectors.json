@@ -1,0 +1,115 @@
+[
+  {
+    "index": 20,
+    "element": "<button> 'GET STARTED NOW'",
+    "action": "click",
+    "selector": "page.getByRole('button', { name: 'GET STARTED NOW' })",
+    "confidence": 99,
+    "input_value": "GET STARTED NOW",
+    "url": "https://www.ngpf.org/bank-sim/home?returnUrl=%2F",
+    "timestamp": "2026-03-25T12:59:49.162934",
+    "tag_name": "button",
+    "text_content": "GET STARTED NOW",
+    "accessible_name": "GET STARTED NOW",
+    "role": "button",
+    "viable_selectors": [
+      {
+        "selector": "page.getByRole('button', { name: 'GET STARTED NOW' })",
+        "strategy": "roost_primary",
+        "confidence": 99,
+        "element_count": 1,
+        "is_unique": true,
+        "target_index": 0,
+        "tier": "unique",
+        "source": "roost-primary-selector"
+      },
+      {
+        "selector": "page.getByRole('button', { name: /GET STARTED NOW/ })",
+        "strategy": "role_name_regex",
+        "confidence": 95,
+        "element_count": 1,
+        "is_unique": true,
+        "target_index": 0,
+        "tier": "unique"
+      },
+      {
+        "selector": "page.getByText('GET STARTED NOW')",
+        "strategy": "text",
+        "confidence": 88,
+        "element_count": 1,
+        "is_unique": true,
+        "target_index": 0,
+        "tier": "unique"
+      },
+      {
+        "selector": "page.locator('button.mat-focus-indicator.button')",
+        "strategy": "css_combined_classes",
+        "confidence": 80,
+        "element_count": 1,
+        "is_unique": true,
+        "target_index": 0,
+        "tier": "unique"
+      },
+      {
+        "selector": "page.locator('button.mat-focus-indicator')",
+        "strategy": "css_stable_class",
+        "confidence": 78,
+        "element_count": 1,
+        "is_unique": true,
+        "target_index": 0,
+        "tier": "unique"
+      },
+      {
+        "selector": "page.locator('button, input[type=\"submit\"], input[type=\"button\"]').filter({ hasText: /^GET STARTED NOW$/ })",
+        "strategy": "button_filter_exact",
+        "confidence": 75,
+        "element_count": 1,
+        "is_unique": true,
+        "target_index": 0,
+        "tier": "unique"
+      },
+      {
+        "selector": "page.locator('button').filter({ hasText: 'GET STARTED NOW' })",
+        "strategy": "tag_filter_text",
+        "confidence": 69,
+        "element_count": 1,
+        "is_unique": true,
+        "target_index": 0,
+        "tier": "unique"
+      },
+      {
+        "selector": "page.locator('xpath=html/body/app-root/app-home/div/div[2]/div/mat-card/mat-card-content/div/div[4]/button')",
+        "strategy": "xpath",
+        "confidence": 50,
+        "element_count": 1,
+        "is_unique": true,
+        "target_index": 0,
+        "tier": "unique"
+      }
+    ],
+    "tested_count": 8,
+    "viable_count": 8,
+    "selector_metadata": {
+      "has_testid": false,
+      "has_role_based": true,
+      "has_text_based": true,
+      "has_scoped": false,
+      "best_strategy": "roost_primary",
+      "uniqueness_status": "unique",
+      "target_index": 0,
+      "selector_with_index": null
+    },
+    "page_context": {
+      "page_title": "Bank Simulator - NGPF",
+      "page_url": "https://www.ngpf.org/bank-sim/home?returnUrl=%2F",
+      "page_url_pattern": "/bank-sim/home",
+      "suggested_page_class": "HomePage"
+    },
+    "method_context": {
+      "action_type": "click",
+      "suggested_method_name": "clickGetstartednow",
+      "causes_navigation": true
+    },
+    "component": "Homepage Get Started Button"
+  }
+]
