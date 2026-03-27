@@ -1,38 +1,28 @@
 {
   "metadata_version": "1.0",
   "created_at": "2026-03-22T18:02:24.580897",
-  "last_updated": "2026-03-22T20:44:16.759175",
+  "last_updated": "2026-03-27T16:50:55.761976",
   "site_url": "https://www.ngpf.org/bank-sim",
   "pom_files": [
     {
       "url": "",
       "file_name": "HomePage.js",
-      "file_path": "pom_tests/pom/HomePage.js"
+      "file_path": "pom_tests\\pom\\HomePage.js"
     },
     {
       "url": "",
       "file_name": "SidebarMenu.js",
-      "file_path": "pom_tests/pom/SidebarMenu.js"
+      "file_path": "pom_tests\\pom\\SidebarMenu.js"
     },
     {
       "url": "",
-      "file_name": "MakeTransferPage.js",
-      "file_path": "pom_tests/pom/MakeTransferPage.js"
+      "file_name": "AccountActivityPage.js",
+      "file_path": "pom_tests\\pom\\AccountActivityPage.js"
     },
     {
       "url": "",
-      "file_name": "LandingPage.js",
-      "file_path": "pom_tests/pom/LandingPage.js"
-    },
-    {
-      "url": "",
-      "file_name": "SimulatorPage.js",
-      "file_path": "pom_tests/pom/SimulatorPage.js"
-    },
-    {
-      "url": "",
-      "file_name": "TransferHistoryPage.js",
-      "file_path": "pom_tests/pom/TransferHistoryPage.js"
+      "file_name": "AccountDetailsPage.js",
+      "file_path": "pom_tests\\pom\\AccountDetailsPage.js"
     }
   ],
   "Login_File": {
@@ -742,5 +732,92 @@
         }
       }
     ]
-  }
+  },
+  "Workflows": [
+    {
+      "workflow_id": "WF001",
+      "title": "Primary Business Workflow",
+      "goal": "Verify users can complete the bank simulation workflow, ending in account verification.",
+      "feature_area": "Banking simulation for financial education",
+      "priority": "high",
+      "starting_hint": "Click on \"Get Started Now\" and then complete this scenario.\nAccept the \"Welcome dialog\", press ok and then look for \"Accounts\" and expand it by clicking\n\n1. Click \"Account Activity\"\n2. Click \"Saving\" bar.\n6. Verify ID \"1100001\" is present",
+      "discovery_source": "user_scenario",
+      "source_file": "C:\\Users\\ZB\\Downloads\\ngpf_scenario.txt",
+      "source_file_hash": "3d18a079548ae52429748857d91e1365ab8f00cfd0b45b10a9dc1e9d9fc44eb5",
+      "worker_completed": true,
+      "worker_result": "success",
+      "linked_scenario_name": "e2e_business_workflow_-_complete_user_journey_01_1774609860",
+      "error": null,
+      "scenario_name": "e2e_business_workflow_-_complete_user_journey_01_1774609860",
+      "scenario_file_path": "scenarios\\WF001_ngpf_scenario.json",
+      "scenario_summary_file_path": "scenarios\\summaries\\WF001_ngpf_scenario.md",
+      "report_pdf_file_path": "scenarios\\reports\\WF001_ngpf_scenario.pdf",
+      "feature_file_path": null,
+      "feature_file_name": null,
+      "agent_workflow_file_path": "C:\\var\\tmp\\Roost\\RoostGPT\\roost-test\\1774609699\\temp_info\\www.ngpf.org\\extracted_data\\execution_flow_WF001_ngpf_scenario.json",
+      "agent_workflow_completed": true,
+      "scenario_analysis_result_file_path": null,
+      "agent_activity_summary": [
+        "Agent initiated the Ngpf Scenario by navigating to the bank-sim application. The agent successfully located and clicked the 'GET STARTED NOW' button to begin the workflow. Upon presentation of the welcome dialog, the agent accepted and dismissed it, then expanded the 'Accounts' sidebar section. Subsequently, the agent selected 'Account Activity', proceeded to the 'Saving' account activity area, and clicked 'VIEW ACCOUNT'. In the final verification, the agent attempted to validate presence of the account ID, but the observed ID was '1200001' instead of the expected '1100001' as specified in the scenario. All navigation and interaction steps executed smoothly, completing the workflow as per process, but the ultimate verification did not match the scenario’s required data."
+      ],
+      "agent_activity_error": [
+        "No technical errors or element interaction failures occurred. All UI elements were successfully located and interacted with as designed. However, in Step 7, the agent verified the visibility of account ID '1200001' whereas the user scenario specified '1100001' as the target. No recovery action was triggered, as the agent proceeded with the available account ID, indicating a possible data discrepancy in the environment rather than procedural error."
+      ],
+      "agent_activity_outcome": [
+        "Agent completed all scenario steps, successfully executing the intended workflow and verifying account ID visibility. However, the account ID found ('1200001') did not match the user scenario’s target ID ('1100001'). The workflow was fully executed; the final data outcome was not aligned with the scenario goal."
+      ],
+      "agent_recommendation": "Review the environment’s account data for scenarios to ensure the expected test ID ('1100001') exists and is accessible. If the ID is missing or replaced, update the test to match the current valid data or investigate regeneration of the correct scenario data set. Enhance test robustness by parameterizing expected account IDs or incorporating dynamic validation.",
+      "agent_completion_level": "complete",
+      "agent_steps_completed": 8,
+      "visited_urls": [
+        "https://www.ngpf.org/bank-sim/",
+        "https://www.ngpf.org/bank-sim",
+        "https://www.ngpf.org/bank-sim/account",
+        "https://www.ngpf.org/bank-sim/home?returnUrl=%2F"
+      ],
+      "execution_flow_file_path": null,
+      "test_generated": true,
+      "test_generation_error": null,
+      "test_name": "e2e_business_workflow___complete_user_journey_01_1774609860_pom.noauth.spec.js",
+      "test_file_path": "pom_tests\\e2e_business_workflow___complete_user_journey_01_1774609860_pom.noauth.spec.js",
+      "test_executed_success": true,
+      "test_execution_error": null,
+      "pom_test_name": "e2e_business_workflow___complete_user_journey_01_1774191904_pom.noauth.spec.js",
+      "pom_test_file_path": "pom_tests\\e2e_business_workflow___complete_user_journey_01_1774191904_pom.noauth.spec.js",
+      "pom_test_executed_success": null,
+      "pom_test_execution_error": null,
+      "pom_files": [
+        {
+          "url": "",
+          "file_name": "HomePage.js",
+          "file_path": "pom_tests\\pom\\HomePage.js"
+        },
+        {
+          "url": "",
+          "file_name": "SidebarMenu.js",
+          "file_path": "pom_tests\\pom\\SidebarMenu.js"
+        },
+        {
+          "url": "",
+          "file_name": "AccountActivityPage.js",
+          "file_path": "pom_tests\\pom\\AccountActivityPage.js"
+        },
+        {
+          "url": "",
+          "file_name": "AccountDetailsPage.js",
+          "file_path": "pom_tests\\pom\\AccountDetailsPage.js"
+        }
+      ],
+      "test_steps": [
+        "Load homepage",
+        "Initiate simulation by clicking 'GET STARTED NOW'",
+        "Accept the welcome dialog by clicking 'Ok'",
+        "Expand the accounts section of the sidebar navigation",
+        "Switch to account activity view",
+        "View detailed saving account activity",
+        "Check that ID '1200001' is visible on account detail page"
+      ],
+      "video_recording_path": "C:\\var\\tmp\\Roost\\RoostGPT\\roost-test\\1774609699\\temp_info\\www.ngpf.org\\extracted_data\\recordings\\WF001_a1\\069c6655-709b-7f41-8000-a7696cd1d2c0.mp4"
+    }
+  ]
 }
