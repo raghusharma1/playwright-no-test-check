@@ -1,38 +1,33 @@
 {
   "metadata_version": "1.0",
   "created_at": "2026-03-22T18:02:24.580897",
-  "last_updated": "2026-03-22T20:44:16.759175",
+  "last_updated": "2026-03-27T14:59:16.412541",
   "site_url": "https://www.ngpf.org/bank-sim",
   "pom_files": [
     {
       "url": "",
-      "file_name": "HomePage.js",
-      "file_path": "pom_tests/pom/HomePage.js"
+      "file_name": "BankSimHomePage.js",
+      "file_path": "pom_tests\\pom\\BankSimHomePage.js"
     },
     {
       "url": "",
-      "file_name": "SidebarMenu.js",
-      "file_path": "pom_tests/pom/SidebarMenu.js"
+      "file_name": "SimulatorStartPage.js",
+      "file_path": "pom_tests\\pom\\SimulatorStartPage.js"
     },
     {
       "url": "",
-      "file_name": "MakeTransferPage.js",
-      "file_path": "pom_tests/pom/MakeTransferPage.js"
+      "file_name": "WelcomeDialogPage.js",
+      "file_path": "pom_tests\\pom\\WelcomeDialogPage.js"
     },
     {
       "url": "",
-      "file_name": "LandingPage.js",
-      "file_path": "pom_tests/pom/LandingPage.js"
+      "file_name": "SidebarPage.js",
+      "file_path": "pom_tests\\pom\\SidebarPage.js"
     },
     {
       "url": "",
-      "file_name": "SimulatorPage.js",
-      "file_path": "pom_tests/pom/SimulatorPage.js"
-    },
-    {
-      "url": "",
-      "file_name": "TransferHistoryPage.js",
-      "file_path": "pom_tests/pom/TransferHistoryPage.js"
+      "file_name": "AccountDetailsPage.js",
+      "file_path": "pom_tests\\pom\\AccountDetailsPage.js"
     }
   ],
   "Login_File": {
@@ -742,5 +737,119 @@
         }
       }
     ]
-  }
+  },
+  "Workflows": [
+    {
+      "workflow_id": "WF001",
+      "title": "Primary Business Workflow",
+      "goal": "Verify users can navigate and access bank simulator account details, and highlight data validation issues.",
+      "feature_area": "Bank simulation and financial literacy education platform",
+      "priority": "high",
+      "starting_hint": "Click on \"Get Started Now\" and then complete this scenario.\nAccept the \"Welcome dialog\", press ok and then look for \"Accounts\" and expand it by clicking\n\n1. Click \"Account Activity\"\n2. Click \"Saving\" bar.\n6. Verify ID \"1100001\" is present",
+      "discovery_source": "user_scenario",
+      "source_file": "C:\\Users\\ZB\\Downloads\\ngpf_scenario.txt",
+      "source_file_hash": "3d18a079548ae52429748857d91e1365ab8f00cfd0b45b10a9dc1e9d9fc44eb5",
+      "worker_completed": true,
+      "worker_result": "success",
+      "linked_scenario_name": "bank_simulator_account_navigation_--_partial_01_1774600453",
+      "error": null,
+      "scenario_name": "bank_simulator_account_navigation_--_partial_01_1774600453",
+      "scenario_file_path": "scenarios\\WF001_ngpf_scenario.json",
+      "scenario_summary_file_path": "scenarios\\summaries\\WF001_ngpf_scenario.md",
+      "report_pdf_file_path": "scenarios\\reports\\WF001_ngpf_scenario.pdf",
+      "feature_file_path": null,
+      "feature_file_name": null,
+      "agent_workflow_file_path": "C:\\var\\tmp\\Roost\\RoostGPT\\roost-test\\1774600215\\temp_info\\www.ngpf.org\\extracted_data\\execution_flow_WF001_ngpf_scenario.json",
+      "agent_workflow_completed": false,
+      "scenario_analysis_result_file_path": null,
+      "agent_activity_summary": [
+        "The agent initiated the bank simulation scenario by navigating to the designated URL. It proceeded to locate and click the 'GET STARTED NOW' button, successfully triggered the bank simulator, and handled the subsequent welcome dialog by clicking 'Ok'. The agent subsequently expanded the 'ACCOUNTS' section, accessed 'ACCOUNT ACTIVITY', and opened the ‘Saving Account Activity’ by clicking the 'VIEW ACCOUNT' button. Upon reaching the account page, the agent searched for the ID '1100001' as per the scenario requirement but failed to locate it. Throughout the execution, all selectors were identified with high confidence and actions executed as intended, but the key verification step did not yield the required result."
+      ],
+      "agent_activity_error": [
+        "Step 8 presented a critical issue: the agent could not locate the required account ID '1100001' on the account page. No recovery or alternative search actions followed, and the scenario could not fulfill the goal of verifying the specified ID. There were no visible blocking errors prior to this step and the workflow executed correctly up to the search."
+      ],
+      "agent_activity_outcome": [
+        "The agent followed the user scenario closely up to the verification step but did not achieve the final objective, as the required account ID '1100001' was not found. The scenario intent was not fully realized."
+      ],
+      "agent_recommendation": "Review the application data for the expected presence of account ID '1100001'. Confirm whether this ID should be visible based on the test environment and scenario configuration. If the account ID is application dependent, ensure test data preparation. If the UI behavior is at fault, perform troubleshooting to verify selectors, timing, or user account context. Re-execute the scenario after addressing data or context issues.",
+      "agent_completion_level": "partial",
+      "agent_steps_completed": 9,
+      "visited_urls": [
+        "https://www.ngpf.org/bank-sim/",
+        "https://www.ngpf.org/bank-sim",
+        "https://www.ngpf.org/bank-sim/account",
+        "https://www.ngpf.org/bank-sim/home?returnUrl=%2F"
+      ],
+      "execution_flow_file_path": null,
+      "test_generated": true,
+      "test_generation_error": null,
+      "test_name": "e2e_business_workflow___complete_user_journey_01_1774191904_pom.noauth.spec.js",
+      "test_file_path": "pom_tests\\e2e_business_workflow___complete_user_journey_01_1774191904_pom.noauth.spec.js",
+      "test_executed_success": false,
+      "test_execution_error": [
+        "Test: Discovered Workflow: e2e_business_workflow - Complete User Journey",
+        "======================================================================",
+        "Main Error:",
+        "Error: No transfer row found in table with description: 'Transfer to Saving Account' or amount: '-$50.00'",
+        "",
+        "Detailed Errors:",
+        "",
+        "Error 1:",
+        "Error: No transfer row found in table with description: 'Transfer to Saving Account' or amount: '-$50.00'",
+        "",
+        "   at pom\\ConfirmationPage.js:56",
+        "",
+        "  54 |       // Only log if running under test, not in prod",
+        "  55 |       console.log('DEBUG: All Past Transfers visible text nodes:', texts);",
+        "> 56 |       throw new Error(`No transfer row found in table with description: '${descStr}' or amount: '${amountStr}'`);",
+        "     |             ^",
+        "  57 |     }",
+        "  58 |     return this;",
+        "  59 |   }",
+        "    at ConfirmationPage.waitForConfirmationAndHistory (C:\\var\\tmp\\Roost\\RoostGPT\\roost-test\\1774600215\\source\\playwright-no-test-check\\playwright_tests\\www.ngpf.org\\playwright_tests\\pom_tests\\pom\\ConfirmationPage.js:56:13)",
+        "    at C:\\var\\"
+      ],
+      "pom_test_name": "e2e_business_workflow___complete_user_journey_01_1774191904_pom.noauth.spec.js",
+      "pom_test_file_path": "pom_tests\\e2e_business_workflow___complete_user_journey_01_1774191904_pom.noauth.spec.js",
+      "pom_test_executed_success": null,
+      "pom_test_execution_error": null,
+      "pom_files": [
+        {
+          "url": "",
+          "file_name": "BankSimHomePage.js",
+          "file_path": "pom_tests\\pom\\BankSimHomePage.js"
+        },
+        {
+          "url": "",
+          "file_name": "SimulatorStartPage.js",
+          "file_path": "pom_tests\\pom\\SimulatorStartPage.js"
+        },
+        {
+          "url": "",
+          "file_name": "WelcomeDialogPage.js",
+          "file_path": "pom_tests\\pom\\WelcomeDialogPage.js"
+        },
+        {
+          "url": "",
+          "file_name": "SidebarPage.js",
+          "file_path": "pom_tests\\pom\\SidebarPage.js"
+        },
+        {
+          "url": "",
+          "file_name": "AccountDetailsPage.js",
+          "file_path": "pom_tests\\pom\\AccountDetailsPage.js"
+        }
+      ],
+      "test_steps": [
+        "Load homepage of bank simulator",
+        "Begin bank simulator session",
+        "Dismiss the welcome dialog after simulator launch",
+        "Expand the Accounts section in the sidebar navigation",
+        "Open the Account Activity details section",
+        "Open Saving Account Activity details",
+        "Verify presence of account ID '1100001'"
+      ],
+      "video_recording_path": "C:\\var\\tmp\\Roost\\RoostGPT\\roost-test\\1774600215\\temp_info\\www.ngpf.org\\extracted_data\\recordings\\WF001_a1\\069c6407-1954-7b39-8000-e4447741c56a.mp4"
+    }
+  ]
 }
