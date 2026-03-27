@@ -9,17 +9,24 @@ This project contains Playwright-based automated tests located in the `playwrigh
 ```bash
  playwright_tests/
    ├── README.md
+   ├── pom_tests/
+   │   ├── pom/
+   │   │   └── *.js (pom pages)
+   │   ├── *_pom.spec.js (pom test files)
+   │   ├── package.json
+   │   └── playwright.config.js
    ├── scenarios/
-      ├── scenarios_summary.md
-      ├── *.json (scenario files)
-      ├── features/
-      │   ├── *.feature (feature files)
-   ├── tests/
-      ├── package.json
-      ├── playwright.config.js
-      ├── .env.template
-      ├── *.spec.js (test files)
-      ├── test_summary.md
+   │   ├── reports/
+   │   │   └── *.pdf (summary with images)
+   │   ├── summaries/
+   │   │   └── *.md (text only summary)
+   │   └── *.json (scenario files)
+   └── tests/
+       ├── package.json
+       ├── playwright.config.js
+       ├── .env.template
+       ├── *.spec.js (test files)
+       └── test_summary.md
 ```
 
 ## 🧩 Prerequisites
@@ -36,7 +43,7 @@ Make sure you have the following installed:
 2. Install dependencies:
 
    ```bash
-   cd tests
+   cd pom_tests or tests # depending on test type generated
    cp .env.template .env
    npm install
    ```
@@ -47,7 +54,7 @@ Make sure you have the following installed:
 To execute all Playwright tests:
 
 ```bash
-npx playwright test
+npx playwright test   # You can provide --headed flag to run tests in headed mode
 ```
 
 You can also run a specific test file:

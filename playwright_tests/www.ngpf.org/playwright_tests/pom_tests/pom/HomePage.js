@@ -41,4 +41,13 @@ export class HomePage extends BasePage {
     await this.okBtn.click({ timeout: 20000 });
     return this;
   }
+
+  /**
+   * Navigates directly to the homepage load url.
+   * @returns {Promise<this>}
+   */
+  async navigateToHome() {
+    await this.page.goto('https://www.ngpf.org/bank-sim', { waitUntil: 'domcontentloaded', timeout: 45000 });
+    return this;
+  }
 }
